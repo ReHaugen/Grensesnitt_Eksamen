@@ -1,0 +1,150 @@
+/* For mobile phones: */
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    
+    
+}
+.grid-container{
+    
+    background-color: white;
+    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    font-family: 'Times New Roman', Times, serif;
+ font-size: 22px;
+ font-weight: 600;
+height: 60px;
+ color: white;
+    
+}
+
+.grid-item{
+    height: 60px;
+    margin: 20px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+
+ 
+
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #858585;
+    text-align: center;
+    font-size: 50px;
+    height: 80px;
+    grid-column: 1/ span 3;
+    grid-row: 1;
+    
+}
+
+
+#item1{
+    background-color: #3a3a3a;
+    
+    margin-top: 30px;
+    
+    grid-column: 1/ span 3;
+    grid-row: 2;
+    
+}
+
+
+#item2{
+    background-color: #3a3a3a;
+   
+    margin-top: 10px;
+    grid-column: 1/ span 3;
+    grid-row: 3;
+    
+}
+
+#item3{
+    background-color: #3a3a3a;
+   
+    margin-top: 10px;
+    
+    grid-column: 1/ span 3;
+    grid-row: 4;
+    
+}
+
+
+
+
+
+
+@media only screen and (min-width: 800px) {
+/* For desktop: */
+
+.grid-container{
+    
+    background-color: white;
+    
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    font-family: 'Times New Roman', Times, serif;
+ font-size: 22px;
+ font-weight: 600;
+height: 60px;
+ color: white;
+    
+}
+
+.grid-item{
+    height: 60px;
+    
+    border-radius: 5px;
+
+}
+
+#header{
+    
+    align-items: center;
+    justify-content: center;
+    background-color: #858585;
+    text-align: center;
+    font-size: 50px;
+    height: 80px;
+    grid-column: 1/ span 3;
+    grid-row: 1;
+    
+}
+
+
+#item1{
+    background-color: #3a3a3a;
+    grid-column: 1;
+    grid-row: 2;
+    margin: 30px;
+    margin-right: 15px;
+}
+
+
+#item2{
+    background-color: #3a3a3a;
+    grid-column: 2;
+    grid-row: 2;
+    margin: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#item3{
+    background-color: #3a3a3a;
+    grid-column: 3;
+    grid-row: 2;
+    margin-top: 30px;
+    margin-left: 15px;
+    
+}
+
+}
