@@ -1,0 +1,28 @@
+#titleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#userContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 400px;
+    height: 500px;
+    background-color: red;
+    border-radius: 50%;
+
+}
+#loginBtnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+
+}
+    
