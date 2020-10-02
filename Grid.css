@@ -4,8 +4,8 @@
 }
 .grid {
     display: grid;
+    height: 700px;
     background-color: black;
-    height: 975px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -16,13 +16,19 @@
 }
 .title {
     grid-area: title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .content {
     grid-area: content;
-    
+    height: 700px;
+    display: flex;
+    justify-content: center;
 }
 .footer {
     grid-area: footer;
+    height: 50px;
     
 }
 
@@ -37,6 +43,7 @@
 
     .grid {
         display: grid;
+        height: 700px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
