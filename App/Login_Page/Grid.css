@@ -13,6 +13,7 @@
     background-color: #bf78ff;
     justify-items: center;
 
+
 }
 #login-form {
     display: grid;
@@ -21,10 +22,14 @@
     grid-auto-rows: min-content;
     grid-row-gap: 2rem;
     align-content: center;
+    border: 1px solid black;
+   
+
 
 }
 .gridItem {
     grid-column: 1/3;
+    ;
 
 
 }
