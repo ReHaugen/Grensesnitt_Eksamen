@@ -40,6 +40,11 @@ body {
   /*text-shadow: 1px 1px 1px grey;*/
 }
 
+.logotext:hover{
+  color: #57514b;
+  cursor: pointer;
+}
+
 .logoicon{
   color:#7d746a;  
   height: 100%;
@@ -81,13 +86,17 @@ main {
 }
 
 .icon{
-  background-color: #968c81;
+  background-color: #7d746a;
   width: 5rem;
   height: 5rem;
   border: 1px solid #7d746a;
   border-radius: 100%;
   text-align: center;
   cursor: pointer;
+}
+
+.icon:hover{
+  background-color: #57514b;
 }
 
 .icon svg{
