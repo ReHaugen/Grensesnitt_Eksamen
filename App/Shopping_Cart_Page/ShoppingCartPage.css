@@ -1,0 +1,24 @@
+.mainbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.buttonwrapper{
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.buttonwrapper div:first-of-type {
+    margin-right: 0.2rem;
+}
+
+.buttonwrapper div:last-of-type {
+    margin-left: 0.2rem;
+}
