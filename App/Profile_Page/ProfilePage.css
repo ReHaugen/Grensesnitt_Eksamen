@@ -1,0 +1,11 @@
+.buttonwrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.buttonwrapper button{
+    margin-bottom: 2rem;
+}
