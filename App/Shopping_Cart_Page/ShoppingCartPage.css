@@ -2,12 +2,30 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
-    align-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.sumwrapper{
+    margin-top: auto; /* Pushes all the items downwards */
+    width: 100%;
+    padding-right: 1rem; /* How much right the dots will go */
+    margin-bottom: 1rem;
+}
+
+.sumwrapper p {
+    margin: 0;
+}
+
+.sumwrapper .dots {
+    margin-top: 0;
+    display: block;
+    border-top: 1px dashed black;
+    margin-left: auto;
+    width: 18rem;
 }
 
 .buttonwrapper{
-    margin-top: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
