@@ -5,3 +5,13 @@
     vertical-align: middle;
     width: 10rem;
 }
+
+.logotext-homepage{
+    font-family: 'Lobster', cursive;
+    font-size: 5rem;
+    color: #7d746a;
+    letter-spacing: 2px;
+    margin: 0;
+    margin-right: 1rem;
+    text-shadow: 2px 2px 2px grey;
+}
