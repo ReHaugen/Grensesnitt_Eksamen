@@ -67,3 +67,23 @@ body {
     padding: 5px 0px;
     margin-bottom: 30px;
 }
+
+.signin-btn {
+    width: 100%;
+    padding: 12px 10px;
+    border: none;
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: rgb(151, 100, 100);
+    margin-bottom: 5px;
+}
+
+.sign-up {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #505050;
+
+}
