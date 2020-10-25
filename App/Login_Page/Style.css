@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: beige;
+    background-color: #EADCCC;
+    
 }
 
 .login-div {
@@ -33,7 +34,7 @@ body {
 .title {
     font-weight: bolder;
     font-size: 35px;
-    background-color: rgb(151, 100, 100);
+    background-color: #7C746A;
 }
 .sub-title {
     font-size: 15px;
@@ -74,8 +75,12 @@ body {
     border: none;
     font-size: 18px;
     border-radius: 30px;
-    background-color: rgb(151, 100, 100);
+    background-color: #7C746A;
     margin-bottom: 5px;
+}
+.signin-btn:hover {
+    opacity: 80%;
+    transform: scale(1.01);
 }
 
 .sign-up {
