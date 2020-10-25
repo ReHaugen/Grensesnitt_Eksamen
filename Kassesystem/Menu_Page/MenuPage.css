@@ -1,0 +1,19 @@
+.mainbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+}
+
+.ordre-button{
+    margin-bottom: 1rem;
+}
+
+.bestillinger-button{
+    margin-bottom: 1rem;
+}
+
+.ordrehistorikk-button{
+    margin-bottom: 1rem;
+}
