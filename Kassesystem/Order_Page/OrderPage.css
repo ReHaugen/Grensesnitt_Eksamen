@@ -1,5 +1,11 @@
+.mainbox{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1;
+}
+
 .food-button{
-    width: 175px;
+    width: 170px;
     height: 80px;
     border-radius: 30px;
     background-color: #7d746a;
@@ -19,12 +25,16 @@
 
 .order-page-main-box{
     background-color: #ebdccc;
-    width: 30%;
-    height: 38rem;
+    width: 40%;
+    height: 90%;
     overflow: auto;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
     border: solid 1px #7d746a;
     box-shadow: 8px 8px 4px grey;
+}
+
+.food-menu{
+    width: 50%;
 }
