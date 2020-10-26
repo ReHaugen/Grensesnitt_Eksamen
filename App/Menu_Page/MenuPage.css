@@ -1,0 +1,18 @@
+.food-button{
+    width: 175px;
+    height: 80px;
+    border-radius: 30px;
+    background-color: #7d746a;
+    color: #423d38;
+    border: 1px solid #7d746a;
+    outline: none;
+    font-weight: bold;
+    margin-top: 7px;
+    box-shadow: 4px 4px 2px grey;
+}
+
+.food-button:hover {
+    background-color: #57514b;
+    color: #ebdccc;
+    cursor: pointer;
+  }
