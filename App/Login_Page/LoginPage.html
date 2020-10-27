@@ -23,15 +23,15 @@
             <img src="Images/UserImg.png" alt="user" >
         </div>
 
-        <div class="subtitle">User</div>
+        <div class="error"></div>
 
-        <div class="form">
+        <form class="form" action="../Home_Page/index.html" method="GET">
             <div class="username">
-                <input type="text" placeholder="Username or Email">
+                <input type="text" placeholder="Username or Email" name="uName" required>
             </div>
 
             <div class="password">
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" name="pass" required>
             </div>
 
             <div class="options">
@@ -47,14 +47,16 @@
 
             </div>
 
-            <button class="signin-btn">
-                <a href="../Home_Page/index.html">LOGIN</a>
+            <button type="submit" class="signin-btn" >
+                <a>LOGIN</a>
             </button>
             <div class="sign-up">
                 <a href="../Register_Page/registerPage.html">Create Account</a>
             </div>
-        </div>
+        </form>
     </div>
+
+    <script src="Script.js"></script>
 
 </body>
 
