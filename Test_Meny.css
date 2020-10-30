@@ -47,6 +47,7 @@
 }
 .menuItems:hover {
     opacity: 80%;
+    transform: scale(1.01);
 }
 
 
