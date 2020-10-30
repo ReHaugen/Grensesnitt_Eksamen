@@ -11,8 +11,6 @@
 
 <body>
 
-
-
     <div class="login-div">
 
         <div class="title">
@@ -23,15 +21,15 @@
             <img src="Images/UserImg.png" alt="user" >
         </div>
 
-        <div class="error"></div>
+        <div id="error"></div>
 
-        <form class="form" action="../Home_Page/index.html" method="GET">
+        <form class="form" action="../Menu_Page/MenuPage.html" method="GET" id="form">
             <div class="username">
                 <input type="text" placeholder="Username or Email" name="uName" required>
             </div>
 
             <div class="password">
-                <input type="password" placeholder="Password" name="pass" required>
+                <input type="password" placeholder="Password" name="pass"required>
             </div>
 
             <div class="options">
@@ -47,7 +45,7 @@
 
             </div>
 
-            <button type="submit" class="signin-btn" >
+            <button type="submit" class="signin-btn">
                 <a>LOGIN</a>
             </button>
             <div class="sign-up">
