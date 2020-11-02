@@ -10,9 +10,7 @@
 </head>
 
 <body>
-
-
-
+    <!--LOGIN-DIV: START-->
     <div class="login-div">
 
         <div class="title">
@@ -25,33 +23,37 @@
 
         <div class="subtitle">Fill out areas to create a account</div>
 
-        <form class="form" action="/" mathod="GET">
+        <!--FORM: START-->
+        <form class="form" name="vform">
 
             <div class="name">
-                <input type="text" placeholder="Forname" required>
+                <input type="text" placeholder="Forname" name="name"> 
+                <div id="name_error" class="val_error"></div>
             </div>
 
             <div class="lastname">
-                <input type="text" placeholder="Lastname" required> 
+                <input type="text" placeholder="Lastname" name="lastname"> 
+                <div id="lname_error" class="val_error"></div>
             </div>
 
             <div class="email">
-                <input type="text" placeholder="Email" required>
+                <input type="text" placeholder="Email" name="email">
+                <div id="email_error" class="val_error"></div>
             </div>
 
             <div class="username">
-                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="Username" name="username">
+                <div id="uname_error" class="val_error"></div>
             </div>
 
 
             <div class="password">
-                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Password" name="password">
+                <div id="name_error" class="val_error"></div>
             </div>
 
-           
-
-            <button class="signin-btn" type="submit">
-                <a href="../Home_Page/index.html">Create User</a>
+            <button class="signin-btn" type="submit" name="register" >
+                <a>Create User</a>
             </button>
 
             <button class="signin-btn" type="button" id="backBtn">
@@ -59,8 +61,11 @@
             </button>
            
         </form>
+        <!--FORM: END-->
+    <!--LOGIN-DIV: END-->
     </div>
 
+    <script src="Script.js" type="text/javascript"></script>
 </body>
 
 </html>
