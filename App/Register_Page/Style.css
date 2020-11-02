@@ -73,14 +73,6 @@ body {
     margin: 10px 0;
 }
 
-.options {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 5px 0px;
-    margin-bottom: 30px;
-}
-
 .signin-btn {
     width: 100%;
     padding: 12px 10px;
@@ -93,10 +85,6 @@ body {
 .signin-btn:hover {
     opacity: 80%;
     transform: scale(1.01);
-}
-
-.sign-up {
-    text-align: center;
 }
 
 a {
