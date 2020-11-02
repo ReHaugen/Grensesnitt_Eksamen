@@ -1,6 +1,7 @@
 var foodList [];
 
 function addToFood () {
+    alert("Hello");
     var addFood = document.getElementById('addFood').nodeValue;
     foodList.push(addFood);
 
@@ -11,19 +12,12 @@ function addToFood () {
 }
 
 function removeRecord (i) {
-    var j = i;
-    var tempList = [];
-    var newFood = "";
-
+    foodList.splice(i, 1); //Fjerner elementer fra posisjon 1
+    var newFood="";
     for (var i = 0; i < foodList.length; i++) {
-        if(i != j) {
-            tempList.push(foodList[i]);
-        }
-    };
-    foodList = tempList;
+        newFood += "<a href='#' onClick='removeRecord(" + i + ");'>X</a> "
+        + foodList[i] + " <br>";
 
-    for (var i = 0; i < foodList.length; i++) {
-        newFood += "<a href='#' onClick='removeRecord(" + i + ");'>X</a> " + foodList[i] + " <br>";
-    };
-    document.getElementById('foods').innerHTML = newFood;
+    }
+
 }
