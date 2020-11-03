@@ -103,11 +103,28 @@ main {
   cursor: pointer;
 }
 
+.icondark{
+  background-color: #423d38;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid #423d38;
+  border-radius: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
 .icon:hover{
   background-color: #57514b;
 }
 
 .icon svg{
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  color: #ebdccc;
+}
+
+.icondark svg{
   height: 100%;
   display: inline-block;
   vertical-align: middle;
@@ -121,7 +138,15 @@ main {
     width: 3.2rem;
   }
 
+  .icondark svg.home {
+    width: 3.2rem;
+  }
+
   .icon svg.menu {
+    width: 2.5rem;
+  }
+
+  .icondark svg.menu {
     width: 2.5rem;
   }
 
@@ -129,7 +154,15 @@ main {
     width: 3.0rem;
   }
 
+  .icondark svg.cart {
+    width: 3.0rem;
+  }
+
   .icon svg.userprofile {
+    width: 2.5rem;
+  }
+
+  .icondark svg.userprofile {
     width: 2.5rem;
   }
 
