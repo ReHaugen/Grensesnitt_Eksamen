@@ -11,50 +11,41 @@
 
 <body>
 
-    <div class="login-div">
+    <div id="wrapper">
+        <form method="GET" action="../Menu_Page/MenuPage.html" onsubmit="return Validate()" name="vform">
+           
+            <div id="header">
+                <h2>EivindsCafé</h2>
+            </div>
+            <div id="img-div">
+                <img src="Images/UserImg.png">
+            </div>
 
-        <div class="title">
-            <h3>EivindCafè</h3>
+            <div id="background_input">
+            <div>
+                <input type="text" name="username" class="textInput" placeholder="Username">
+                <div id="name_error" class="val_error"></div>
+            </div>
+            <div>
+                <input type="password" name="password" class="textInput" placeholder="Password">
+                <div id="password_error" class="val_error"></div>
+            </div>
+            <div id="remember-div">
+                <input type="checkbox">
+                <label>Remember me?</label>
+                <a href="../ForgotPassword_Page/forgotPassword.html">Forgot password?</a>
+            </div>
+            <div>
+                <input type="submit" value="Login" name="loginBtn" class="btn">
+            </div>
         </div>
-
-        <div class="logo">
-            <img src="Images/UserImg.png" alt="user" >
-        </div>
-
-        <div id="error"></div>
-
-        <form class="form" action="../Menu_Page/MenuPage.html" method="GET" id="form">
-            <div class="username">
-                <input type="text" placeholder="Username or Email" name="uName" required>
-            </div>
-
-            <div class="password">
-                <input type="password" placeholder="Password" name="pass"required>
-            </div>
-
-            <div class="options">
-                <div class="remember-me">
-                    <input type="checkbox" id="remember-me">
-                    <label for="remember-me">Remember me?</label>
-                </div>
-            
-
-                <div class="forgort-password">
-                    <a href="../ForgotPassword_Page/forgotPassword.html">Forgot password?</a>
-                </div>
-
-            </div>
-
-            <button type="submit" class="signin-btn">
-                <a>LOGIN</a>
-            </button>
-            <div class="sign-up">
-                <a href="../Register_Page/registerPage.html">Create Account</a>
-            </div>
         </form>
     </div>
 
-    <script src="Script.js"></script>
+
+
+
+    <script type="text/javascript" src="Script.js"></script>
 
 </body>
 
