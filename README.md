@@ -8,6 +8,7 @@ Semester task - DS3801 Grensesnittdesign - Kristiania University College.
 2. [About. ](#about)
 3. [Concept and prototype. ](#concept)
 4. [Logo. ](#logo)
+5. [Class description. ] (#classdescription) 
 
 <a name="start"></a>
 ## Quick start:
@@ -45,6 +46,15 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 ## Logo: 
 * We think it is important to have a logo to make the page unique, recognizable and works as a kind of jewelry on the page. We did it the easy way and made a logo out of a cool font that we liked called "Lobster" that seemed like a good fit for a cafe. Then we added an icon of coffeebeans. 
 * The advantages of using a font and icon as a logo instead of an image - except that it is quick and easy - are that you can style it as you wish. Make it bigger, smaller, with shadows and fit the logo to the different pages. Below you can see the logo how it looks in the front page and in the other pages.  
-* We styled the logo in warm earth tones that blended in perfectly with the rest of the clean design. This gives the page that delicate feeling that reminds us of a good cup of coffee.
+* We styled the logo in warm earth tones that blended in perfectly with the rest of the clean design. This gives the page that delicate feeling that reminds us of a good cup of coffee. <br/>
 ![](Images/logo1.png) <br/>
 ![](Images/logo2.png)
+
+<a name="classdescription"></a>
+## Class description: 
+
+### App
+**<ins>Front page</ins>** blablabla osv.. 
+
+### Cash register system 
+**<ins>Front page</ins>** blablabla osv.. 
