@@ -53,8 +53,8 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 <a name="classdescription"></a>
 ## Class description: 
 
-### App
+### Customer app
 **<ins>Front page</ins>** blablabla osv.. 
 
-### Cash register system 
+### Employee cash register system 
 **<ins>Front page</ins>** blablabla osv.. 
