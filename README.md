@@ -27,12 +27,15 @@ Semester task - DS3801 Grensesnittdesign, in Kristiania University College.
 * Saving information in Local Storage.
 
 <a name="concept"></a>
-## Concept: 
+## Concept and prototype: 
 * Through qualitative interviews, we came to the conclusion that it is important for the user that the solution is easy to use, easily accessible, it must be aesthetically pleasing and they must receive good information about the actions they do. This was what we had in mind when we made thread sketches and flow charts, and at last the clickable, finished prototype of what the finished product should look like.
 * The clickable finished prototype is clear, intuitive and easy to use as you can see for yourself below. 
+* We made the prototypes in Adobe XD. 
 
 ### App prototype:
 ![](Images/app-prototype.gif) 
+https://xd.adobe.com/view/801e8487-66c4-492e-bc81-af03c40a28bb-d54d/
 
 ### Cash register system prototype: 
 ![](Images/cashregistersystem-prototype.gif)
+https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/
