@@ -60,7 +60,7 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 ### Customer app
 * **<ins>Login page: </ins>** This page is the front page of EivindCafés order app where the customer either log in or use the app as an anonymous guest. The main function here is to navigate the customer on to the menu where they can place their order. 
 
-* **<ins>Food menu page: </ins>** On the menu page the customer can see all the items from the drink and dessert menu, and add the the suff they want to order in the shopping cart. When they click on the coffees they will get an popup menu where they can choose between small, medium and large beverages. 
+* **<ins>Menu page: </ins>** On the menu page the customer can see all the items from the drink and dessert menu, and add the the suff they want to order in the shopping cart. When they click on the coffees they will get an popup menu where they can choose between small, medium and large beverages. 
 
 * **<ins>Shopping cart page: </ins>** Is where you get an overview of everything you have added to the cart. You can adjust the number with plus- and minus buttons and you can remove items you dont want anymore. Then you click on one of the pay-buttons that will take you further to the next page. 
 
@@ -71,15 +71,15 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 * **<ins>Order history page: </ins>** Will show the user all the previous orders that has been placed. 
 
 ### Employee cash register system 
-* **<ins>Login page: </ins>** The front page of the cash register system where the employees enter their employee number and password. This takes you further to the next page. 
+* **<ins>Login page: </ins>** The front page of the cash register system where the employees enter their employee number and password. This takes you further to the navigation page. 
 
-* **<ins>Menu page: </ins>**
+* **<ins>Navigation page: </ins>** This is where the employee choose between making an order for the customer, see the orders which has come from the customer app or watch orders that are finished in the order history page. 
 
-* **<ins>Order page: </ins>**
+* **<ins>Order page: </ins>** This page holds the drink- and dessert menu and the shopping cart. 
 
-* **<ins>Orders in progress page: </ins>**
+* **<ins>Orders in progress page: </ins>** When the employee has placed an order manually for a customer or a customer has ordered through the app, it will show here. And this is where the employees keep track of the ordres they need to prepare, befor they either press the finish og the cancel order button. 
 
-* **<ins>Order history page: </ins>**
+* **<ins>Order history page: </ins>** When orders are done, they end up here. 
 
 <a name="requirements"></a>
 ## Requirements and installation:
