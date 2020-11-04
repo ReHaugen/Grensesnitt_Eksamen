@@ -1,23 +1,23 @@
 .drink-button{
-    width: 170px;
-    height: 80px;
-    border-radius: 30px;
-    background-color: #7d746a;
-    color: #423d38;
-    border: 1px solid #7d746a;
-    outline: none;
-    font-weight: bold;
-    margin-top: 7px;
-    box-shadow: 4px 4px 2px grey;
+  width: 170px;
+  height: 80px;
+  border-radius: 30px;
+  background-color: #7d746a;
+  color: #423d38;
+  border: 1px solid #7d746a;
+  outline: none;
+  font-weight: bold;
+  margin-top: 7px;
+  box-shadow: 4px 4px 2px grey;
 }
 
 .drink-button:hover {
-    background-color: #57514b;
-    color: #ebdccc;
-    cursor: pointer;
-  }
+  background-color: #57514b;
+  color: #ebdccc;
+  cursor: pointer;
+}
 
-  .food-button{
+.food-button{
     width: 170px;
     height: 80px;
     border-radius: 30px;
@@ -35,6 +35,7 @@
     color: #ebdccc;
     cursor: pointer;
   }
+
 
   /* The Modal (background) */
 .modal {
@@ -71,7 +72,7 @@
     padding: 20px;
     border: 1px solid #888;
      /* Could be more or less, depending on screen size */
-    min-height: 350px;
+    min-height: 300px;
     border-radius: 20px;
     color: #423d38;
   }
@@ -103,6 +104,20 @@
     border-radius: 100%;
     border: 4px solid #ebdccc;
 
+  }
+
+  #foodPrice{
+    line-height: 10px;
+    top: 50px;
+    margin-bottom: 35px;
+    
+    
+  }
+
+  #pricetxt{
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-size: 25px;
   }
 
   #error{
@@ -162,7 +177,8 @@
   }
 
   #quantityDiv{
-    margin:auto;
+    margin: auto;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 30px;
 
@@ -206,7 +222,7 @@
 
   #menuItemFooter{
     background-color: #ebdccc;
-    height: 50px;
+    height: 55px;
     text-align: center;
     bottom: 0;
     margin: 20px -20px -20px -20px;
@@ -217,7 +233,7 @@
   }
 
   #addToOrder{
-    line-height: 50px;
+    line-height: 55px;
     text-align: center;
     font-weight: bold;
   }

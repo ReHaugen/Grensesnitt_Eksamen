@@ -3,16 +3,21 @@ var menuitemname = "";
 var smallPrice = 0;
 var mediumPrice = 0;
 var largePrice = 0;
+var foodPrice = 0;
 var displayQuantity = document.getElementById("quantityCounter");
 var quantityError = document.getElementById("error");
 var addBtn = document.getElementById("add_btn");
 var subtractBtn = document.getElementById("subtract_btn");
 var itemName = document.getElementById("menuitem");
 var itemPhoto = document.getElementById("photoContainer");
+var drinkSize = document.getElementById("changeSizeContainer");
+var foodPriceTxt = document.getElementById("pricetxt");
+var foodPriceDiv = document.getElementById("foodPrice");
 var smalltext = document.getElementById("smalltxt");
 var mediumtext = document.getElementById("mediumtxt");
 var largetext = document.getElementById("largetxt");
 var drinkButtons = document.getElementsByClassName("drink-button");
+var foodButtons = document.getElementsByClassName("food-button");
 
 
 
@@ -29,18 +34,62 @@ var span = document.getElementsByClassName("close")[0];
 /**/
 
 window.onload = function() {
-  
+foodInfo();
+drinkInfo();
+}
+  function foodInfo (){
+  for(var i = 0; i < foodButtons.length; i++) {
+    var fbtn = foodButtons[i];
+    menuitemname = this.id;
+
+    fbtn.addEventListener('click', displayFoodInfo, false);
+
+    function displayFoodInfo(e){
+      orderQuantity = 1;
+      displayQuantity.innerHTML = `${orderQuantity}`;
+      menuitemname = this.id;
+      itemName.innerHTML = `${menuitemname}`;
+      itemPhoto.innerHTML = `<img src="Images/${menuitemname}.jpeg" alt="${menuitemname}" id = "menuPhoto"></img>`;
+      drinkSize.style.display = "none";
+      foodPriceDiv.style.display = "block";
+
+      if (menuitemname === "brownies"){
+        foodPrice = 44;
+      } else if (menuitemname === "oreokake"){
+        foodPrice = 54;
+      }else if (menuitemname === "kanelbolle"){
+        foodPrice = 46;
+      }else if (menuitemname === "croissant"){
+        foodPrice = 38;
+      }else if (menuitemname === "chiapudding"){
+        foodPrice = 42;
+      }else if (menuitemname === "brioche"){
+        foodPrice = 44;
+      }else if (menuitemname === "scones"){
+        foodPrice = 37;
+      }
+      foodPriceTxt.innerHTML = `<b>${foodPrice},-</b>`;
+      
+      modal.style.display = "block";
+    }
+}
+}
+
+  function drinkInfo() {
   for(var i = 0; i < drinkButtons.length; i++) {
       var btn = drinkButtons[i];
       menuitemname = this.id;
 
-      btn.addEventListener('click', setDrinkInfo, false);
+      btn.addEventListener('click', displayDrinkInfo, false);
 
-      function setDrinkInfo(e){
+      function displayDrinkInfo(e){
         orderQuantity = 1;
         displayQuantity.innerHTML = `${orderQuantity}`;
         menuitemname = this.id;
         itemName.innerHTML = `${menuitemname}`;
+        drinkSize.style.display = "block";
+        foodPrice = 0;
+        foodPriceDiv.style.display = "none";
         itemPhoto.innerHTML = `<img src="Images/${menuitemname}.jpeg" alt="${menuitemname}" id = "menuPhoto"></img>`;
 
         if (menuitemname === "filterkaffe"){
