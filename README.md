@@ -58,10 +58,20 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 ## Class description: 
 
 ### Customer app
-**<ins>Front page</ins>** blablabla osv.. 
+* **<ins>Login page: </ins>** This page is the front page of EivindCafés order app where the customer either log in or use the app as an anonymous guest. The main function here is to navigate the customer on to the menu where they can place their order. 
+
+* **<ins>Menu page: </ins>** On the menu page the customer can see all the items from the drink and dessert menu, and add the the suff they want to order in the shopping cart. When they click on the coffees they will get an popup menu where they can choose between small, medium and large beverages. 
+
+* **<ins>Shopping cart page: </ins>** Is where you get an overview of everything you have added to the cart. You can adjust the number with plus- and minus buttons and you can remove items you dont want anymore. Then you click on one of the pay-buttons that will take you further to the next page. 
+
+* **<ins>Receipt page: </ins>** Will show you what you ordered and paid for. 
+
+* **<ins>Profile page: </ins>** Consists of four buttons, where the first one "order history" will show you all the orders you have placed and paid for earlier. The two next buttons is for the customer to be able to change profile- and app settings. We have not added any function here for now, but this can be a nice hobby project for us later when we dont have time pressure. The last button is a log out button, that takes you to the first page "login page". 
+
+* **<ins>Order history page: </ins>** Will show the user all the previous orders that has been placed. 
 
 ### Employee cash register system 
-**<ins>Front page</ins>** blablabla osv.. 
+* **<ins>Front page</ins>** blablabla osv.. 
 
 <a name="requirements"></a>
 ## Requirements and installation:
