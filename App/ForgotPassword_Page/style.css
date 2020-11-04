@@ -68,6 +68,9 @@ img {
     padding: 10px;
     border-radius: 10px;
 }
+#background_input p {
+    margin-left: 25px;
+}
 #backBtn {
     margin-top: 5px;
     width: 50%;
