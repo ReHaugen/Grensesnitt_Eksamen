@@ -1,4 +1,4 @@
-☕️ # Group 24 ☕️
+# Group 24 ☕️
 Semester task - DS3801 Grensesnittdesign, in Kristiania University College. 
 
 !!!LEGG INN GIF AV FERDIG PROSJEKT HER!!!
