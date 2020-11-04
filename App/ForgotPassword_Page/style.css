@@ -1,7 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+
 body {
     background-image: url("../Login_Page/Images/Test.png");
     background-repeat: no-repeat;
@@ -31,7 +28,7 @@ body {
 }
 div h2 {
     font-size: 25px;
-    line-height: 102px;
+    line-height: 10px;
 }
 form {
     width: 50%;
