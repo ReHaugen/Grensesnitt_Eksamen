@@ -1,3 +1,22 @@
+.drink-button{
+  width: 170px;
+  height: 80px;
+  border-radius: 30px;
+  background-color: #7d746a;
+  color: #423d38;
+  border: 1px solid #7d746a;
+  outline: none;
+  font-weight: bold;
+  margin-top: 7px;
+  box-shadow: 4px 4px 2px grey;
+}
+
+.drink-button:hover {
+  background-color: #57514b;
+  color: #ebdccc;
+  cursor: pointer;
+}
+
 .food-button{
     width: 150px;
     height: 80px;
@@ -17,43 +36,55 @@
     cursor: pointer;
   }
 
-  /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+
+  /**
+  
+  MENU CARD STYLING 
+  
+  **/
+
+  /* Menu cardview parentcontainer, background */
+.menuCardWindow {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 95px;
-    width: 100%; /* Full width */
-    height: 76.51%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    padding: 0px;
+    width: 100%; 
+    height: 76.51%; 
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
   }
   
-  /* Modal Content/Box */
-  .modal-content {
-   
-    background-color: #fefefe;
-
-    margin: auto;
+  /* Menu cardview container */
+  .menuCardContent {
     position: absolute;
+    margin: 0px auto;
+    padding: 20px;
+    min-height: 300px;
+    width: 300px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    min-height: 300px;
-    border-radius: 15px;
+    line-height: 27px;
+    letter-spacing: 2px;
+    text-align: center;
+    background-color: #fefefe;
+    color: #423d38;
+    border: 6px solid #ebdccc;
+    border-radius: 20px;
+    
   }
   
-  /* The Close Button */
+  /* exit cardview button */
   .close {
     color: #aaa;
     float: right;
+    position: absolute;
+    left: 258px;
+    top: 18px;
     font-size: 28px;
     font-weight: bold;
   }
@@ -65,14 +96,155 @@
     cursor: pointer;
   }
 
-  #filterkaffeimg{
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+/* Menu photo and title */
+  #menuPhoto{
+    display: block;
+    margin: 0px auto;
+    padding: 0%;
+    left: 102px;
+    top:5px;
     height: 90px;
     border-radius: 100%;
-    bor
+    border: 4px solid #ebdccc;
+    -webkit-box-shadow: -2px 2px 4px 1px rgba(0,0,0,0.26); 
+    box-shadow: -2px 2px 4px 1px rgba(0,0,0,0.26);
+  }
+
+  #itemTitleContainer{
+    margin: 0;
+    margin-top: -5px;
+    
+  }
+  
+  #itemTitle{
+    margin-top: 25px;
+    text-transform: uppercase;
+  }
+
+  /* Item price, visible for food items only */
+  #foodPrice{
+    line-height: 10px;
+    top: 50px;
+    margin-bottom: 35px;
+  }
+
+  #pricetxt{
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-size: 25px;
+  }
+
+  /* Item size options and prices, visible for drink items only  */
+  #changeSizeContainer{
+    padding-top: 1px;
+    margin-top: -25px;
+    padding-bottom: 10px;
+    letter-spacing: normal;
+  }
+
+  .sizeDiv{
+    display: inline-block;
+    line-height: 18px;
+  }
+
+  .size-btn{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #7d746a;
+    border: 2px solid #ebdccc;
+    color: white;
+    outline: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  #small{
+    height: 33px;
+  }
+
+  #medium{
+    height: 39px;
+  }
+
+  #large{
+    height: 45px;
+  }
+
+  /* Add/subtract item - elements  */
+  #quantityDiv{
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
 
   }
+
+  .changeQuantity_btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #ebdccc;
+    border: 2px solid #ebdccc;
+    color: #7d746a;
+    outline: none;
+    padding: 0px;
+    font-size: 30px;
+    margin:auto;
+    text-align: center;
+  }
+
+ #subtract_btn{
+    display: inline-block;
+    line-height: 20px;
+  }
+#quantityCounter{
+    display: inline-block;
+    margin: 10px;
+  }
+  #add_btn{
+    display: inline-block;
+    line-height: 20px;
+  }
+
+ #error{
+    font-size: 12px;
+    top: 40px;
+    line-height: 20px;
+    height: auto;
+    width: auto;
+    letter-spacing: normal;
+  }
+
+  /* Bottom of cardview, add to order */
+  #menuItemFooter{
+    background-color: #ebdccc;
+    height: 55px;
+    text-align: center;
+    bottom: 0;
+    left: -5px;
+    
+    margin-top: 20px ;
+    margin-left: -26px;
+    margin-bottom: -20px;
+    margin-right: -20px;
+    width: 298px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  
+  }
+
+  #addToOrder{
+    line-height: 55px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: normal;
+  }
+
+  
+  
