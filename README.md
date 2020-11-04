@@ -10,6 +10,9 @@ Semester task - DS3801 Grensesnittdesign - Kristiania University College.
 4. [Logo. ](#logo)
 5. [Class description. ](#classdescription)
 6. [Requirements and installation. ](#requirements)
+7. [Mobile support. ](#mobile)
+8. [Technology used. ](#technology) 
+9. [Code Style. ](#code)
 
 <a name="start"></a>
 ## Quick start:
@@ -62,3 +65,13 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 
 <a name="requirements"></a>
 ## Requirements and installation:
+
+
+<a name="mobile"></a>
+## Mobile support
+
+<a name="technology"></a>
+## Technology used
+
+<a name="code"></a>
+## Code style
