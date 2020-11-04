@@ -1,4 +1,23 @@
-.food-button{
+.drink-button{
+    width: 170px;
+    height: 80px;
+    border-radius: 30px;
+    background-color: #7d746a;
+    color: #423d38;
+    border: 1px solid #7d746a;
+    outline: none;
+    font-weight: bold;
+    margin-top: 7px;
+    box-shadow: 4px 4px 2px grey;
+}
+
+.drink-button:hover {
+    background-color: #57514b;
+    color: #ebdccc;
+    cursor: pointer;
+  }
+
+  .food-button{
     width: 170px;
     height: 80px;
     border-radius: 30px;
@@ -24,9 +43,10 @@
     z-index: 1; /* Sit on top */
     left: 0;
     top: 95px;
+    padding: 0px;
     width: 100%; /* Full width */
     height: 76.51%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+     /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
@@ -36,24 +56,33 @@
   .modal-content {
    
     background-color: #fefefe;
-
-    margin: auto;
+    
+    margin: 0px auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 300px;
+    line-height: 1px;
+
+   
+    text-align: center;
 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    min-height: 300px;
-    border-radius: 15px;
+     /* Could be more or less, depending on screen size */
+    min-height: 350px;
+    border-radius: 20px;
+    color: #423d38;
   }
   
   /* The Close Button */
   .close {
     color: #aaa;
     float: right;
+    position: absolute;
+    left: 262px;
+    top: 25px;
     font-size: 28px;
     font-weight: bold;
   }
@@ -65,14 +94,138 @@
     cursor: pointer;
   }
 
-  #filterkaffeimg{
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  #menuPhoto{
+    margin: 0px auto;
+    padding: 0%;
+    display: block;
+    left: 102px;
     height: 90px;
     border-radius: 100%;
-    bor
+    border: 4px solid #ebdccc;
 
   }
+
+  #error{
+    font-size: 12px;
+    
+    top: 40px;
+    line-height: 20px;
+    height: auto;
+    width: auto;
+  }
+
+  .sizeDiv{
+    display: inline-block;
+  }
+
+
+
+  .size-btn{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #7d746a;
+    border: 2px solid #ebdccc;
+    color: white;
+    outline: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .changeQuantity_btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #ebdccc;
+    border: 2px solid #ebdccc;
+    color: #7d746a;
+    outline: none;
+    padding: 0px;
+    font-size: 30px;
+    margin:auto;
+    text-align: center;
+  }
+
+  #changeSizeContainer{
+    padding-top: 1px;
+    padding-bottom: 10px;
+  }
+
+  #subtract_btn{
+    line-height: 20px;
+  }
+  #add_btn{
+    line-height: 20px;
+  }
+
+  #quantityDiv{
+    margin:auto;
+    text-align: center;
+    font-size: 30px;
+
+  }
+
+  #small{
+    height: 33px;
+  }
+
+  #medium{
+    height: 39px;
+  }
+
+  #large{
+    height: 45px;
+  }
+
+  .sizeDiv{
+    line-height: 20px;
+  }
+
+  #subtract_btn{
+    display: inline-block;
+  }
+
+  #add_btn{
+    display: inline-block;
+  }
+
+  #quantityCounter{
+    display: inline-block;
+    margin: 10px;
+  }
+
+  #menuitem{
+    margin-top: 25px;
+    text-transform: uppercase;
+    
+    
+  }
+
+  #menuItemFooter{
+    background-color: #ebdccc;
+    height: 50px;
+    text-align: center;
+    bottom: 0;
+    margin: 20px -20px -20px -20px;
+    width: 298px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  
+  }
+
+  #addToOrder{
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #itemName{
+    height: auto;
+    width: auto;
+   
+  }
+
+  
