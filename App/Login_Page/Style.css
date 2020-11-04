@@ -1,50 +1,55 @@
 body {
     background-image: url("Images/Test.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 
 }
 #wrapper {
-    width: 35%;
+    position: relative;
+    height: 600px;
+    width: 400px;
     margin: 50px auto;
     padding: 20px;
     background: white;
     border-radius: 10%;
     border: 1px solid #7d746a;
+    
 
 }
 #header {
-    width: 100%;
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    width: 300px;
+    height: 50px;
     background-color: #7d746a;
-    text-align: center;
     border-radius: 5px;
+    text-align: center;
+    
+    
 }
 div h2 {
-    font-size: 40px;
+    font-size: 25px;
+    line-height: 10px;
+    
 }
 form {
     width: 50%;
-    margin: 100px auto;
-
 }
-
-form div {
-    margin: 3px auto;
-}
-
 #img-div {
+    position: absolute;
+    left: 150px;
+    top: 25%;
     width: 150px;
     height: 150px;
-    background-color: #FF1F1F;
     border-radius: 50%;
-    margin-bottom: 20px;
+    background-image: url("Images/UserImg.png");
+    background-repeat: no-repeat;
 }
-img {
-    width: 150px;
-    height: 150px;
-}
+
 .textInput {
     margin-top: 2px;
+    margin-bottom: 10px;
     height: 28px;
     border: 1px solid #5E6E66;
     font-size: 16px;
@@ -52,9 +57,9 @@ img {
     width: 100%;
 }
 .btn {
-    margin-top: ;
     padding: 10px;
     width: 100%;
+    margin: 2px;
 
 
 }
@@ -62,8 +67,12 @@ img {
     color: #FF1F1F;
 }
 #background_input {
+    position: absolute;
+    bottom: 10%;
+    left: 80px;
+    width: 250px;
+    height: 220px;
     background-color: #ebdccc;
-    width: 100%;
     padding: 10px;
     border-radius: 10px;
 }

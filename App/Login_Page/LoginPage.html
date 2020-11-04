@@ -11,16 +11,13 @@
 
 <body>
 
-    <div id="wrapper">
+    <div id="wrapper" class="wrapper">
         <form method="GET" action="../Menu_Page/MenuPage.html" onsubmit="return Validate()" name="vform">
            
             <div id="header">
                 <h2>EivindsCafé</h2>
             </div>
-            <div id="img-div">
-                <img src="Images/UserImg.png">
-            </div>
-
+            <div id="img-div"></div>
             <div id="background_input">
             <div>
                 <input type="text" name="username" class="textInput" placeholder="Username">
@@ -37,6 +34,8 @@
             </div>
             <div>
                 <input type="submit" value="Login" name="loginBtn" class="btn">
+                <input type="button" value="Guest" name="loginBtn" class="btn">
+                <a href="../Register_Page/registerPage.html">Create user</a>
             </div>
         </div>
         </form>

@@ -1,11 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     background-image: url("../Login_Page/Images/Test.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 
 }
 #wrapper {
-    width: 35%;
+    position: relative;
+    height: 600px;
+    width: 400px;
     margin: 50px auto;
     padding: 20px;
     background: white;
@@ -14,38 +20,37 @@ body {
 
 }
 #header {
-    width: 100%;
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 300px;
+    height: 50px;
     background-color: #7d746a;
-    text-align: center;
     border-radius: 5px;
+    text-align: center;
 }
 div h2 {
-    font-size: 40px;
+    font-size: 25px;
+    line-height: 102px;
 }
 form {
     width: 50%;
-    margin: 100px auto;
+    
 
 }
-
-form div {
-    margin: 3px auto;
-}
-
 #img-div {
+    position: absolute;
+    left: 150px;
+    top: 30%;
     width: 150px;
     height: 150px;
-    background-color: #FF1F1F;
     border-radius: 50%;
-    margin-bottom: 20px;
-}
-img {
-    width: 150px;
-    height: 150px;
+    background-image: url("../Login_Page/Images/UserImg.png");
+    background-repeat: no-repeat;
 }
 .textInput {
     margin-top: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     height: 28px;
     border: 1px solid #5E6E66;
     font-size: 16px;
@@ -53,7 +58,6 @@ img {
     width: 100%;
 }
 .btn {
-    margin-top: ;
     padding: 10px;
     width: 100%;
 
@@ -63,13 +67,18 @@ img {
     color: #FF1F1F;
 }
 #background_input {
+    position: absolute;
+    bottom: 10%;
+    left: 80px;
+    width: 250px;
+    height: 180px;
     background-color: #ebdccc;
-    width: 100%;
     padding: 10px;
     border-radius: 10px;
 }
 #background_input p {
     margin-left: 25px;
+    margin-bottom: 10px;
 }
 #backBtn {
     margin-top: 5px;
