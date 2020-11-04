@@ -6,7 +6,7 @@ Semester task - DS3801 Grensesnittdesign, in Kristiania University College.
 ## Table of contents
 1. [Quick start. ](#start)
 2. [About. ](#about)
-3. [Concept. ](#concept)
+3. [Concept and prototype. ](#concept)
 
 <a name="start"></a>
 ## Quick start:
@@ -33,9 +33,10 @@ Semester task - DS3801 Grensesnittdesign, in Kristiania University College.
 * We made the prototypes in Adobe XD. 
 
 ### App prototype:
-![](Images/app-prototype.gif) 
 https://xd.adobe.com/view/801e8487-66c4-492e-bc81-af03c40a28bb-d54d/
+![](Images/app-prototype.gif) 
 
 ### Cash register system prototype: 
-![](Images/cashregistersystem-prototype.gif)
 https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/
+![](Images/cashregistersystem-prototype.gif)
+
