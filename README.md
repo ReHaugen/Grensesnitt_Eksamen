@@ -71,15 +71,15 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 * **<ins>Order history page: </ins>** Will show the user all the previous orders that has been placed. 
 
 ### Employee cash register system 
-* **<ins>Login page: </ins>** The front page of the cash register system where the employees enter their employee number and password. This takes you further to the next page. 
+* **<ins>Login page: </ins>** The front page of the cash register system where the employees enter their employee number and password. This takes you further to the navigation page. 
 
-* **<ins>Navigation page: </ins>**
+* **<ins>Navigation page: </ins>** This is where the employee choose between making an order for the customer, see the orders which has come from the customer app or watch orders that are finished in the order history page. 
 
-* **<ins>Order page: </ins>**
+* **<ins>Order page: </ins>** This page holds the drink- and dessert menu and the shopping cart. 
 
-* **<ins>Orders in progress page: </ins>**
+* **<ins>Orders in progress page: </ins>** When the employee has placed an order manually for a customer or a customer has ordered through the app, it will show here. And this is where the emplyees keep track of the ordres they need to prepare, befor they either press the finish og the cancel order button. 
 
-* **<ins>Order history page: </ins>**
+* **<ins>Order history page: </ins>** When orders are done, they end up here. 
 
 <a name="requirements"></a>
 ## Requirements and installation:
