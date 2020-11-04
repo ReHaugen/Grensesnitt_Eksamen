@@ -22,3 +22,5 @@ Semester task - DS3801 Grensesnittdesign, in Kristiania University College.
 * The target group is students, because they often but coffee on the go, work in cafes and use cafes when they study. Therefore, we have tried to get a stylish and consistent design. But ff course we want the solution to be used by everyone, so the main focus is simplicity.
 * We strive to meet the users expectations and needs, as quickly and dependably as possible.
 * In the app, which will primarily be used on mobilephones, customers can order certain products or an order that contains several different products. The user can also see an overview of the total price of an order, be able to add more than one item to their order, remove items from the order and see an overview of previous orders. 
+* In the cash register system, which is not primarily on the phone, the employee can choose which employee is logged in, complete orders and see an overview of previous orders. They can also see orders coming from the customers app and tap that it is complete when done.
+* Saving information in Local Storage.
