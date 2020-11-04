@@ -60,7 +60,7 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 ### Customer app
 * **<ins>Login page: </ins>** This page is the front page of EivindCafés order app where the customer either log in or use the app as an anonymous guest. The main function here is to navigate the customer on to the menu where they can place their order. 
 
-* **<ins>Food menu page: </ins>** On the menu page the customer can see all the items from the drink and dessert menu, and add the the suff they want to order in the shopping cart. When they click on the coffees they will get an popup menu where they can choose between small, medium and large beverages. 
+* **<ins>Menu page: </ins>** On the menu page the customer can see all the items from the drink and dessert menu, and add the the suff they want to order in the shopping cart. When they click on the coffees they will get an popup menu where they can choose between small, medium and large beverages. 
 
 * **<ins>Shopping cart page: </ins>** Is where you get an overview of everything you have added to the cart. You can adjust the number with plus- and minus buttons and you can remove items you dont want anymore. Then you click on one of the pay-buttons that will take you further to the next page. 
 
@@ -73,7 +73,7 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 ### Employee cash register system 
 * **<ins>Login page: </ins>** The front page of the cash register system where the employees enter their employee number and password. This takes you further to the next page. 
 
-* **<ins>Menu page: </ins>**
+* **<ins>Navigation page: </ins>**
 
 * **<ins>Order page: </ins>**
 
