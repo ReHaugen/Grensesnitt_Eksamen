@@ -6,7 +6,8 @@ Semester task - DS3801 Grensesnittdesign, in Kristiania University College.
 ## Table of contents
 1. [Quick start. ](#start)
 2. [About. ](#about)
-3. [Concept. ](#concept)
+3. [Concept and prototype. ](#concept)
+4. [Logo. ](#logo)
 
 <a name="start"></a>
 ## Quick start:
@@ -27,7 +28,22 @@ Semester task - DS3801 Grensesnittdesign, in Kristiania University College.
 * Saving information in Local Storage.
 
 <a name="concept"></a>
-## Concept: 
+## Concept and prototype: 
 * Through qualitative interviews, we came to the conclusion that it is important for the user that the solution is easy to use, easily accessible, it must be aesthetically pleasing and they must receive good information about the actions they do. This was what we had in mind when we made thread sketches and flow charts, and at last the clickable, finished prototype of what the finished product should look like.
 * The clickable finished prototype is clear, intuitive and easy to use as you can see for yourself below. 
-![](Images/app-prototype.gif)
+* We made the prototypes in Adobe XD. 
+
+### App prototype:
+https://xd.adobe.com/view/801e8487-66c4-492e-bc81-af03c40a28bb-d54d/ <br/>
+![](Images/app-prototype.gif) 
+
+### Cash register system prototype: 
+https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
+![](Images/cashregistersystem-prototype.gif)
+
+<a name="logo"></a>
+## Logo: 
+* We think it is important to have a logo to make the page unique, recognizable and because the logo works as a kind of jewelry on the page. We did it the easy way and made a logo out of a cool font that we liked called "Lobster" that seemed lika a good fit for a cafe. Thed we added an icon of coffeebeans. 
+* The advantages of using a font and icon as a logo instead of an image - except that it is quick and easy - are that you can style it as you wish.
+* We styled the logo in warm brown tones that blended in perfectly with the rest of the clean design.
+
