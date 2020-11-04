@@ -18,4 +18,6 @@ Semester task - DS3801 Grensesnittdesign, in Kristiania University College.
 ## About the project:
 * The project started 07.09.2020 and lasted to 09.11.2020.
 * We are three students collaborating on this exam project. 
-* In this assignment, we will create a cash register system for employees and an app for customers in Eivind's café. The solution we create will be intuitive and simple to understand and use. 
+* In this assignment, we will create a cash register system for employees and an app for customers in Eivind's café. The solution we create will be intuitive, efficient and simple to understand and use. 
+* The target group is students, because they often but coffee on the go, work in cafes and use cafes when they study. Therefore, we have tried to get a stylish and consistent design. But ff course we want the solution to be used by everyone, so the main focus is simplicity.
+* We strive to meet the users expectations and needs, as quickly and dependably as possible.
