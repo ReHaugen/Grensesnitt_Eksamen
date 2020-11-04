@@ -1,29 +1,29 @@
 //GETTING INPUTS
-var username = document.forms["vform"]["username"];
+var email = document.forms["vform"]["email"];
 
 //GETTING ERROR DISPLAY
-var name_error = document.getElementById("name_error");
+var name_error = document.getElementById("email_error");
 
 
 //SETTING EVENT LISTENERS
-username.addEventListener("blur", nameVerify, true);
+email.addEventListener("blur", emailVerify, true);
 
 //Validate function
 function Validate() {
     //Username validation
-    if (username.value == "") {
-        username.style.border = "1px solid red";
-        name_error.textContent = "Username is required";
-        username.focus();
+    if (email.value == "") {
+        email.style.border = "1px solid red";
+        email_error.textContent = "Email is required";
+        email.focus();
         return false
 
     }
 }
 //EVENT HANDLER
-function nameVerify() {
-    if (username.value != "") {
-        username.style.border = "1px solid #5E6E66;";
-        name_error.innerHTML = "";
+function emailVerify() {
+    if (email.value != "") {
+        email.style.border = "1px solid #5E6E66;";
+        email_error.innerHTML = "";
         return true;
 
     }

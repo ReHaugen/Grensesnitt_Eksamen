@@ -27,7 +27,7 @@ function Validate() {
         name.style.border = "1px solid red";
         name_error.textContent = "Name is required";
         name.focus();
-        return false
+        return false;
 
     }
     //Lastname validation
@@ -35,7 +35,7 @@ function Validate() {
         lastname.style.border = "1px solid red";
         lname_error.textContent = "Lastname is required";
         lastname.focus();
-        return false
+        return false;
 
     }
     //Email validation
@@ -43,7 +43,7 @@ function Validate() {
         email.style.border = "1px solid red";
         email_error.textContent = "Email is required";
         email.focus();
-        return false
+        return false;
 
     }
     //Username validation
@@ -51,7 +51,7 @@ function Validate() {
         username.style.border = "1px solid red";
         username_error.textContent = "Username is required";
         username.focus();
-        return false
+        return false;
 
     }
     //Password validation
@@ -59,7 +59,7 @@ function Validate() {
         password.style.border = "1px solid red";
         password_error.textContent = "Password is required";
         password.focus();
-        return false
+        return false;
 
     }
 
