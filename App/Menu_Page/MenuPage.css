@@ -64,13 +64,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    line-height: 1px;
+    line-height: 27px;
 
-   
+   letter-spacing: 2px;
     text-align: center;
 
     padding: 20px;
-    border: 1px solid #888;
+    border: 6px solid #ebdccc;
      /* Could be more or less, depending on screen size */
     min-height: 300px;
     border-radius: 20px;
@@ -82,8 +82,8 @@
     color: #aaa;
     float: right;
     position: absolute;
-    left: 262px;
-    top: 25px;
+    left: 258px;
+    top: 18px;
     font-size: 28px;
     font-weight: bold;
   }
@@ -100,9 +100,12 @@
     padding: 0%;
     display: block;
     left: 102px;
+    top:5px;
     height: 90px;
     border-radius: 100%;
     border: 4px solid #ebdccc;
+    -webkit-box-shadow: -2px 2px 4px 1px rgba(0,0,0,0.26); 
+box-shadow: -2px 2px 4px 1px rgba(0,0,0,0.26);
 
   }
 
@@ -166,6 +169,7 @@
 
   #changeSizeContainer{
     padding-top: 1px;
+    margin-top: -25px;
     padding-bottom: 10px;
   }
 
@@ -197,7 +201,7 @@
   }
 
   .sizeDiv{
-    line-height: 20px;
+    line-height: 18px;
   }
 
   #subtract_btn{
@@ -225,7 +229,12 @@
     height: 55px;
     text-align: center;
     bottom: 0;
-    margin: 20px -20px -20px -20px;
+    left: -5px;
+    
+    margin-top: 20px ;
+    margin-left: -26px;
+    margin-bottom: -20px;
+    margin-right: -20px;
     width: 298px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -234,13 +243,14 @@
 
   #addToOrder{
     line-height: 55px;
+    font-size: 18px;
     text-align: center;
     font-weight: bold;
   }
 
   #itemName{
-    height: auto;
-    width: auto;
+    margin: 0;
+    margin-top: -5px;
    
   }
 
