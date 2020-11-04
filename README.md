@@ -6,6 +6,7 @@ Semester task - DS3801 Grensesnittdesign, in Kristiania University College.
 ## Table of contents
 1. [Quick start. ](#start)
 2. [About. ](#about)
+3. [Concept. ](#concept)
 
 <a name="start"></a>
 ## Quick start:
@@ -24,3 +25,8 @@ Semester task - DS3801 Grensesnittdesign, in Kristiania University College.
 * In the app, which will primarily be used on mobilephones, customers can order certain products or an order that contains several different products. The user can also see an overview of the total price of an order, be able to add more than one item to their order, remove items from the order and see an overview of previous orders. 
 * In the cash register system, which is not primarily on the phone, the employee can choose which employee is logged in, complete orders and see an overview of previous orders. They can also see orders coming from the customers app and tap that it is complete when done.
 * Saving information in Local Storage.
+
+<a name="concept"></a>
+## Concept: 
+* Through qualitative interviews, we came to the conclusion that it is important for the user that the solution is easy to use, easily accessible, it must be aesthetically pleasing and they must receive good information about the actions they do. This was what we had in mind when we made thread sketches and flow charts, and at last the clickable, finished prototype of what the finished product should look like.
+
