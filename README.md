@@ -77,7 +77,7 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 
 * **<ins>Order page: </ins>** This page holds the drink- and dessert menu and the shopping cart. 
 
-* **<ins>Orders in progress page: </ins>** When the employee has placed an order manually for a customer or a customer has ordered through the app, it will show here. And this is where the emplyees keep track of the ordres they need to prepare, befor they either press the finish og the cancel order button. 
+* **<ins>Orders in progress page: </ins>** When the employee has placed an order manually for a customer or a customer has ordered through the app, it will show here. And this is where the employees keep track of the ordres they need to prepare, befor they either press the finish og the cancel order button. 
 
 * **<ins>Order history page: </ins>** When orders are done, they end up here. 
 
