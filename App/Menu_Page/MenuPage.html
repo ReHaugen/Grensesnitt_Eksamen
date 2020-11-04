@@ -36,93 +36,81 @@
 
             <main>
                 <section class="mainbox">
+
                     <h1 class="normaltext">Drikke:</h1>
-           
-                   
+                    <!-- Drink buttons -->
                     <button class="drink-button" id="filterkaffe" >FILTERKAFFE</button>
+                    <button class="drink-button" id = "cappuccino">CAPPUCCINO</button>
+                    <button class="drink-button" id = "americano">AMERICANO</button>
+                    <button class="drink-button" id = "iskaffe">ISKAFFE</button>
+                    <button class="drink-button" id = "caffe mocha">CAFFE MOCHA</button>
+                    <button class="drink-button" id = "caffe latte">CAFFE LATTE</button>
+                    <button class="drink-button" id = "caramel macchiato">CARAMEL MACCHIATO</button>
+                    <button class="drink-button" id = "espresso">ESPRESSO</button>
+                    <button class="drink-button" id = "cortado">CORTADO</button>
+                    <button class="drink-button" id = "iste">ISTE</button>
+                     <button class="drink-button" id = "annet">ANNET</button>
 
-                
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
+                   
+                    <h1 class="normaltext">Dessert:</h1>
+                    <!-- Food buttons -->
+                    <button class="food-button" id = "brownies">BROWNIES</button>
+                    <button class="food-button" id = "oreokake">OREOKAKE</button>
+                    <button class="food-button" id = "kanelbolle" >KANELBOLLE</button>
+                    <button class="food-button" id = "croissant">CROISSANT</button>
+                    <button class="food-button" id = "chiapudding">CHIAPUDDING</button>
+                    <button class="food-button" id ="brioche">BRIOCHE</button>
+                    <button class="food-button" id = "scones">SCONES</button>
+                    <button class="food-button" id = "annet">ANNET</button>
 
-                        <!-- Modal content -->
-                        <div class="modal-content">
+                    <!-- Menu item cardview, main container -->
+                    <div id="menuCard" class="menuCardWindow">
+
+                        <!-- Menu item cardview, content container -->
+                        <div class="menuCardContent">
+
+                            
                             <span class="close">&times;</span>
                             
                             
                             <div id = "photoContainer"> <img src="" alt="Menu item" id = "menuPhoto"> </div>
-                            <div id = "itemName"><h1 id = "menuitem"> </h1> </div>
-                            
+                            <div id = "itemTitleContainer"><h1 id = "itemTitle"> </h1> </div>
                             <div id = "foodPrice"><p id = "pricetxt"></p> <p> per stk </p></div>
 
                             <div id="changeSizeContainer">
+
                                 <p>Velg størrelse:</p>
+                            
+                            <!-- size option buttons -->
                             <div class = "sizeDiv">
                                 <button class="size-btn" ><img src="Images/small.png" alt = "small size" id = "small"></button>
-                                <p id = "smalltxt">Liten</p>
-                            </div>
-                            <div class = "sizeDiv">
-                                <button class="size-btn" ><img src="Images/medium.png" alt = "medium size" id = "medium"></button>
-                                <p id = "mediumtxt">Medium</p>
-                            </div>
-                            <div class = "sizeDiv">
-                                <button class="size-btn" ><img src="Images/large.png" alt = "large size" id = "large"></button>
-                                <p id = "largetxt">Stor</p>
-                            </div>
+                                <p id = "smalltxt"></p>
                             </div>
                             
-                        <div id = "quantityDiv"> 
-                            <button class="changeQuantity_btn" id = "subtract_btn">-</button>
-                            <p id = "quantityCounter"> 1 </p>
-                            <button class="changeQuantity_btn" id = "add_btn" >+</button>
-                            <p id = "error"></p>
-                        </div>
+                            <div class = "sizeDiv">
+                                <button class="size-btn" ><img src="Images/medium.png" alt = "medium size" id = "medium"></button>
+                                <p id = "mediumtxt"></p>
+                            </div>
+
+                            <div class = "sizeDiv">
+                                <button class="size-btn" ><img src="Images/large.png" alt = "large size" id = "large"></button>
+                                <p id = "largetxt"></p>
+                            </div>
+
+                            </div>
+                            
+                            <!-- quantity buttons -->
+                            <div id = "quantityDiv"> 
+                                <button class="changeQuantity_btn" id = "subtract_btn">-</button>
+                                <p id = "quantityCounter"> 1 </p>
+                                <button class="changeQuantity_btn" id = "add_btn" >+</button>
+                                <p id = "error"></p>
+                            </div>
                         
                         <div id = "menuItemFooter"> <p id="addToOrder">Legg til i bestilling</p></div>
 
                         </div>
-
                         </div>
-        
-            
-                    <button class="drink-button" id = "cappuccino">CAPPUCCINO</button>
-                   
-                    <button class="drink-button" id = "americano">AMERICANO</button>
-                  
-                    <button class="drink-button" id = "iskaffe">ISKAFFE</button>
-           
-                    <button class="drink-button" id = "caffe mocha">CAFFE MOCHA</button>
-           
-                    <button class="drink-button" id = "caffe latte">CAFFE LATTE</button>
-           
-                    <button class="drink-button" id = "caramel macchiato">CARAMEL MACCHIATO</button>
-           
-                    <button class="drink-button" id = "espresso">ESPRESSO</button>
-           
-                    <button class="drink-button" id = "cortado">CORTADO</button>
-           
-                    <button class="drink-button" id = "iste">ISTE</button>
-
-                    <button class="drink-button" id = "annet">ANNET</button>
-
-                   
-           
-                       <h1 class="normaltext">Dessert:</h1>
-                       <button class="food-button" id = "brownies">BROWNIES</button>
-               
-                       <button class="food-button" id = "oreokake">OREOKAKE</button>
-                   
-                       <button class="food-button" id = "kanelbolle" >KANELBOLLE</button>
-                  
-                        <button class="food-button" id = "croissant">CROISSANT</button>
-           
-                    <button class="food-button" id = "chiapudding">CHIAPUDDING</button>
-           
-                    <button class="food-button" id ="brioche">BRIOCHE</button>
-           
-                       <button class="food-button" id = "scones">SCONES</button>
-
-                       <button class="food-button" id = "annet">ANNET</button>
                   
                 </section>
             </main>
