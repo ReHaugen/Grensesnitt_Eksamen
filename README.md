@@ -9,6 +9,7 @@ Semester task - DS3801 Grensesnittdesign - Kristiania University College.
 3. [Concept and prototype. ](#concept)
 4. [Logo. ](#logo)
 5. [Class description. ] (#classdescription) 
+6. [Requirements and installation. ] (#requirements) 
 
 <a name="start"></a>
 ## Quick start:
@@ -58,3 +59,6 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 
 ### Employee cash register system 
 **<ins>Front page</ins>** blablabla osv.. 
+
+<a name="requirements"></a>
+## Requirements and installation:
