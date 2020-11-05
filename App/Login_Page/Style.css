@@ -13,7 +13,24 @@ body {
     background: white;
     border-radius: 10%;
     border: 1px solid #7d746a;
-    
+    animation-name: FadeIn;
+    animation-duration: 0.5s;
+}
+@keyframes FadeIn {
+    0% {
+        visibility: hidden;
+        transform: scale(0.2);
+
+    }
+    50%{
+        visibility: hidden;
+
+    }
+    100% {
+        animation-delay: 4s;
+        transform: scale(1);
+        visibility: visible;
+    }
 
 }
 #header {
@@ -71,7 +88,7 @@ form {
     bottom: 10%;
     left: 80px;
     width: 250px;
-    height: 220px;
+    height: 240px;
     background-color: #ebdccc;
     padding: 10px;
     border-radius: 10px;
@@ -86,5 +103,69 @@ div label{
 }
 div a {
     font-size: 13px;
+
+}
+#reg-link {
+    margin-left: 39%;
+}
+
+@media only screen and (max-width: 500px) {
+    #wrapper {
+        position: relative;
+        height: 600px;
+        width: 270px;
+        margin: 50px 35px;
+        padding: 10px;
+        background: white;
+        border-radius: 10%;
+        border: 1px solid #7d746a;
+        
+    
+    }
+    #header {
+        position: absolute;
+        top: 10%;
+        right: 25%;
+        width: 150px;
+        height: 50px;
+        background-color: #7d746a;
+        border-radius: 5px;
+        text-align: center;
+        
+        
+    }
+    #img-div {
+        position: absolute;
+        left: 70px;
+        top: 25%;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-image: url("Images/UserImg.png");
+        background-repeat: no-repeat;
+    }
+
+    #background_input {
+        position: absolute;
+        bottom: 5%;
+        left: 35px;
+        width: 200px;
+        height: 240px;
+        background-color: #ebdccc;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    div label{
+        font-size: 10px;
+        padding: 5px;
+    }
+    div a {
+        font-size: 10px;
+    
+    }
+
+    
+
 
 }
