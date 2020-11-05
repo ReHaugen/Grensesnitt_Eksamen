@@ -37,6 +37,12 @@
                 <section class="mainbox">
                     <h1 class="normaltext">Takk for ditt kjøp!</h1>
                     <h4 class="normaltext">Her kan du se din bestilling:</h4>
+
+                    <div id="orderLines">
+                        <!-- The order lines from local storage comes here. See script.js -->
+                    </div>
+                    <div class="normaltext"><u>SUM: <span id="total"></span> kr</u></div>
+
                     <button class="large-button">SEND KOPI PÅ E-POST</button>
                 </section>
             </main>
@@ -76,6 +82,8 @@
             </footer>
          
         </div>
-        
+
+        <script src="../../Domene/common.js" type="module"></script>
+        <script src="script.js" type="module"></script>
     </body>
 </html>

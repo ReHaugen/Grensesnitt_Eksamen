@@ -1,5 +1,5 @@
 .drink-button{
-  width: 170px;
+  width: 150px;
   height: 80px;
   border-radius: 30px;
   background-color: #7d746a;
@@ -161,6 +161,7 @@
     margin-right: 5px;
     margin-top: 0px;
     margin-bottom: 0px;
+    cursor: pointer;
   }
 
   #small{
@@ -201,6 +202,7 @@
  #subtract_btn{
     display: inline-block;
     line-height: 20px;
+    cursor: pointer;
   }
 #quantityCounter{
     display: inline-block;
@@ -209,6 +211,7 @@
   #add_btn{
     display: inline-block;
     line-height: 20px;
+    cursor: pointer;
   }
 
  #error{
@@ -235,7 +238,7 @@
     width: 298px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-  
+    cursor: pointer;
   }
 
   #addToOrder{
@@ -246,5 +249,7 @@
     letter-spacing: normal;
   }
 
-  
+  .active {
+    border: 5px solid #423d38;
+  }
   

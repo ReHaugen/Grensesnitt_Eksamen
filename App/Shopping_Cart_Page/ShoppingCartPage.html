@@ -50,53 +50,13 @@
               bestillingen.
             </h4>
 
-            <div>
-              <span class="normaltext">Varelinje 1</span>
+            <div id="orderLines">
+              <!-- The order lines from local storage comes here. See script.js -->
+            </div>
 
-              <button class="small-button">+</button>
-              <button class="small-button">-</button>
-              <button class="small-button">x</button>
-             </div>
-
-             <div>
-              <span class="normaltext">Varelinje 2</span>
-              <button class="small-button">+</button>
-              <button class="small-button">-</button>
-              <button class="small-button">x</button>
-             </div>
-
-             <div>
-              <span class="normaltext">Varelinje 3</span>
-              <button class="small-button">+</button>
-              <button class="small-button">-</button>
-              <button class="small-button">x</button>
-             </div>
-
-             <div>
-              <span class="normaltext">Varelinje 4</span>
-              <button class="small-button">+</button>
-              <button class="small-button">-</button>
-              <button class="small-button">x</button>
-             </div>
-
-             <div>
-              <span class="normaltext">Varelinje 5</span>
-              <button class="small-button">+</button>
-              <button class="small-button">-</button>
-              <button class="small-button">x</button>
-             </div>
-
-             <div>
-              <span class="normaltext">Varelinje 6</span>
-              <button class="small-button">+</button>
-              <button class="small-button">-</button>
-              <button class="small-button">x</button>
-             </div>
-
-            
           </div>
           <div class="sumwrapper">
-              <p class="normaltext">SUM: </p>
+              <p class="normaltext">SUM: <span id="total"><!-- The total comes here. See script.js --></span> kr</p>
               <span class="dots"></span>
             </div>
           <div class="buttonwrapper">
@@ -197,6 +157,7 @@
       </footer>
     </div>
 
-    <script src="Script.js"></script>
+    <script src="../../Domene/common.js" type="module"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
