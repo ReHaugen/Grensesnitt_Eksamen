@@ -1,5 +1,5 @@
 import drinks from './drinks.js';
-import desserts from './dessert.js';
+import desserts from './desserts.js';
 
 // Constants
 const localStorageOrdersName = "orders";
@@ -60,6 +60,31 @@ function getDrink(name) {
 }
 
 
+// Dessert management
+
+/**
+ * Adds a dessert to the cart for the current logged in user.
+ * 
+ * @param {string} name name of the dessert how it appears in the desserts.js data structure
+ */
+export function addDessertToCart(name) {
+    const dessert = getDessert(name);
+    addToCart(getUserId() ,{
+        key: dessert.name,
+        price: dessert.price,
+        description: drink.name
+    });
+}
+
+/**
+ * Gets a drink by name from the drinks.js data structure.
+ * 
+ * @param {string} name name of the drink how it appears in the drinks.js data structure
+ */
+function getDessert(name) {
+    return desserts[name];
+}
+
 // Cart management
 
 /**
@@ -67,7 +92,7 @@ function getDrink(name) {
  * Currently *not* incrementing the quantity if duplicate items are added.
  * 
  * @param {string} userId to which user id to add to its cart
- * @param {string} item either a drink (drink.js) or dessert (dessert.js) 
+ * @param {string} item either a drink (drinks.js) or dessert (desserts.js) 
  */
 function addToCart(userId, item) {
     const order = getOrderByUserId(userId);
