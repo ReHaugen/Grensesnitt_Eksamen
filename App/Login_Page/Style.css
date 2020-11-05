@@ -14,7 +14,7 @@ body {
     border-radius: 10%;
     border: 1px solid #7d746a;
     animation-name: FadeIn;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
 }
 @keyframes FadeIn {
     0% {
@@ -22,8 +22,9 @@ body {
         transform: scale(0.2);
 
     }
-    50%{
+    25%{
         visibility: hidden;
+        transform: scale(0.5);
 
     }
     100% {
