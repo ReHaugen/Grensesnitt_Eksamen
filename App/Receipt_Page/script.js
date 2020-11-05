@@ -29,4 +29,11 @@ import {
     element.appendChild(titleElement);
     return element;
   }
+
+  document.getElementById("alert").onclick=()=>alertFunction()
+  function alertFunction(){
+    alert("Kvittering sendt!");
+  }
+
+ 
   
