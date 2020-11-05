@@ -1,3 +1,6 @@
+import { setUserId, addDrinkToCart } from "../../Domene/common.js";
+
+
 var menuitemname = "";
 var smallPrice = 0;
 var mediumPrice = 0;
@@ -179,3 +182,19 @@ function addQuantity(){
 
 addBtn.onclick = addQuantity;
 subtractBtn.onclick = subtractQuantity;
+
+
+//setUserId("test");
+
+// Add a drink to order.
+
+// First get all drink buttons (with data-type=drink)
+const drinkButtons = document.querySelectorAll('[data-type=drink]'); 
+
+// Add event listener onclick. Send name and size to local storage.
+drinkButtons
+  .forEach((drinkbutton) => 
+    drinkbutton.addEventListener("click", (click) => 
+       addDrinkToCart(click.target.name, "medium") // TODO: use in modal
+    )
+);
