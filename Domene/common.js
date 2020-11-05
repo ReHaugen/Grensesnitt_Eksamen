@@ -5,8 +5,6 @@ import desserts from './desserts.js';
 const localStorageOrdersName = "orders";
 const localStorageUserIdName = "userId";
 
-
-
 // User management
 
 /**
@@ -26,6 +24,7 @@ function getUserId() {
 export function setUserId(userId) {
     localStorage.setItem(localStorageUserIdName, userId)
     localStorage.setItem(localStorageOrdersName, JSON.stringify({
+        ...getOrders(),
         [userId]: {
             total: 0,
             orderLines: []
@@ -45,7 +44,7 @@ export function setUserId(userId) {
 export function addDrinkToCart(name, size, quantity) {
     const drink = getDrink(name);
     addToCart(getUserId() ,{
-        key: drink.name,
+        key: generateUUID(),
         price: drink.size[size].price,
         description: `${drink.name} - ${drink.size[size].name}`
     }, quantity);
@@ -72,7 +71,7 @@ export function getDrink(name) {
 export function addDessertToCart(name, quantity) {
     const dessert = getDessert(name);
     addToCart(getUserId(), {
-        key: dessert.name,
+        key: generateUUID(),
         price: dessert.price,
         description: dessert.name
     }, quantity);
@@ -118,6 +117,47 @@ function addToCart(userId, item, quantity = 1) {
 }
 
 /**
+ * Remove a order line by key for the current logged in user
+ * @param {string} key the key identifyer for the order line 
+ */
+export function removeOrderLineFromOrderForLoggedInUser(key) {
+    const userId = getUserId();
+    const order = getOrderByUserId(userId); 
+    const orderLines = order.orderLines.filter((orderLine) => orderLine.key !== key);
+    const currentTotal = orderLines.map(orderLine => orderLine.price).reduce((prev, next) => prev + next,  0);
+    
+    localStorage.setItem(localStorageOrdersName, 
+        JSON.stringify({ ...getOrders, 
+            [userId]: {
+                ...order,
+                total: currentTotal,
+                orderLines: orderLines
+            }
+        })
+    );
+}
+
+
+/**
+ * Gets the current total of the logged in user
+ * @returns {number} the current total
+ */
+export function getCurrentTotalForLoggedInUser() {
+    const userId = getUserId();
+    const order = getOrderByUserId(userId);
+    return order.total;
+}
+
+/**
+ * Gets the order lines of the logged in user
+ */
+export function getOrderLinesForLoggedInUser() {
+    const userId = getUserId();
+    const order = getOrderByUserId(userId);
+    return order.orderLines;
+}
+
+/**
  * Gets the current order for the specified user from local storage.
  * 
  * @param {string} userId to which user it concerns
@@ -134,3 +174,12 @@ function getOrders() {
     return JSON.parse(localStorage.getItem(localStorageOrdersName));
 }
 
+/**
+ * Generates a random uuid
+ */
+function generateUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+    });
+  }

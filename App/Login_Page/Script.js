@@ -1,3 +1,7 @@
+import { setUserId } from '../../Domene/common.js'
+// Use this function when successfully logged in
+setUserId("Juni"); // <-- Username
+
 //GETTING INPUTS
 var username = document.forms["vform"]["username"];
 var password = document.forms["vform"]["password"];
