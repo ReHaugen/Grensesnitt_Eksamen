@@ -1,170 +1,156 @@
-import { setUserId, addDrinkToCart } from "../../Domene/common.js";
+import {
+  addDrinkToCart,
+  addDessertToCart,
+  getDrink,
+  getDessert,
+} from "../../Domene/common.js";
 
+let orderQuantity = 1;
 
-var menuitemname = "";
-var smallPrice = 0;
-var mediumPrice = 0;
-var largePrice = 0;
-var foodPrice = 0;
-var orderQuantity = 1;
+const displayMenuCard = document.getElementById("menuCard");
+const closeButton = document.getElementsByClassName("close")[0];
 
-var drinkButtons = document.getElementsByClassName("drink-button");
-var foodButtons = document.getElementsByClassName("food-button");
-var displayMenuCard = document.getElementById("menuCard");
-var span = document.getElementsByClassName("close")[0];
+const itemPhoto = document.getElementById("photoContainer");
+const itemName = document.getElementById("itemTitle");
+const foodPriceDiv = document.getElementById("foodPrice");
+const foodPriceTxt = document.getElementById("pricetxt");
+const drinkSize = document.getElementById("changeSizeContainer");
+const smalltext = document.getElementById("smalltxt");
+const mediumtext = document.getElementById("mediumtxt");
+const largetext = document.getElementById("largetxt");
+const addBtn = document.getElementById("add_btn");
+const displayQuantity = document.getElementById("quantityCounter");
+const subtractBtn = document.getElementById("subtract_btn");
+const drinkButtons = document.querySelectorAll(".drink-button");
+const foodButtons = document.querySelectorAll(".food-button");
 
-var itemPhoto = document.getElementById("photoContainer");
-var itemName = document.getElementById("itemTitle");
-var foodPriceDiv = document.getElementById("foodPrice");
-var foodPriceTxt = document.getElementById("pricetxt");
-var drinkSize = document.getElementById("changeSizeContainer");
-var smalltext = document.getElementById("smalltxt");
-var mediumtext = document.getElementById("mediumtxt");
-var largetext = document.getElementById("largetxt");
-var addBtn = document.getElementById("add_btn");
-var displayQuantity = document.getElementById("quantityCounter");
-var subtractBtn = document.getElementById("subtract_btn");
-var quantityError = document.getElementById("error");
+// Event listeners
+addBtn.onclick = addQuantity;
+subtractBtn.onclick = subtractQuantity;
 
+// Add event listener onclick. Get the drink from the data structure and open modal.
+drinkButtons.forEach((drinkbutton) =>
+  drinkbutton.addEventListener("click", (click) =>
+    openDrinkModal(click.target.name)
+  )
+);
 
-//Run functions to generate menu cardview on page load
-window.onload = function() {
-foodInfo();
-drinkInfo();
-}
+// Add event listener onclick. Get the dessert from the data structure and open modal.
+foodButtons.forEach((foodButton) =>
+  foodButton.addEventListener("click", (click) =>
+    openDessertModal(click.target.name)
+  )
+);
 
-//Generate cardview for food items
-function foodInfo (){
+/**
+ * Opens the drinks modal.
+ * @param {string} name name of the drink as it is in the drinks.js
+ */
+function openDrinkModal(name) {
+  const drink = getDrink(name);
 
-  //Iterate through items and retrieve id/name
-  for(var i = 0; i < foodButtons.length; i++) {
-    var fbtn = foodButtons[i];
-    menuitemname = this.id;
+  orderQuantity = 1;
+  displayQuantity.innerHTML = `${orderQuantity}`;
+  itemName.innerHTML = drink.name;
+  drinkSize.style.display = "block";
+  foodPrice = 0;
+  foodPriceDiv.style.display = "none";
+  itemPhoto.innerHTML = `<img src="Images/${drink.image.src}" alt="${drink.image.alt}" id = "menuPhoto" />`;
 
-    fbtn.addEventListener('click', displayFoodInfo, false);
+  smalltext.innerHTML = `${drink.size.small.name}<br><b>${drink.size.small.price},-</b>`;
+  mediumtext.innerHTML = `${drink.size.medium.name}<br><b>${drink.size.medium.price},-</b>`;
+  largetext.innerHTML = `${drink.size.large.name}<br><b>${drink.size.large.price},-</b>`;
 
-    //generate info about each item through it's unique id/name
-    function displayFoodInfo(){
-      orderQuantity = 1;
-      displayQuantity.innerHTML = `${orderQuantity}`;
-      menuitemname = this.id;
-      itemName.innerHTML = `${menuitemname}`;
-      itemPhoto.innerHTML = `<img src="Images/${menuitemname}.jpeg" alt="${menuitemname}" id = "menuPhoto"></img>`;
-      drinkSize.style.display = "none";
-      foodPriceDiv.style.display = "block";
+  displayMenuCard.style.display = "block";
 
-      //prices
-      
-      if (menuitemname === "brownies"){
-        foodPrice = 44;
-      }else if (menuitemname === "oreokake"){
-        foodPrice = 54;
-      }else if (menuitemname === "kanelbolle"){
-        foodPrice = 46;
-      }else if (menuitemname === "croissant"){
-        foodPrice = 38;
-      }else if (menuitemname === "chiapudding"){
-        foodPrice = 42;
-      }else if (menuitemname === "brioche"){
-        foodPrice = 44;
-      }else if (menuitemname === "scones"){
-        foodPrice = 37;
-      }
+  // Select size of drink when click on image
+  let selectedSize;
+  document.querySelectorAll(".size-btn").forEach(
+    (element) =>
+      (element.onclick = (event) => {
+        selectedSize = element.name;
+        setActive(element, "size-btn");
+      })
+  );
 
-      foodPriceTxt.innerHTML = `<b>${foodPrice},-</b>`;
-      
-      //after the user has clicked the button and the info has been generated, the cardview becomes visible
-      displayMenuCard.style.display = "block";
+  // onclick "add to order"
+  document.querySelector("#menuItemFooter").onclick = (event) => {
+    if (selectedSize) {
+      addDrinkToCart(name, selectedSize, orderQuantity);
+      closeModal();
+    } else {
+      error.innerHTML = "Du må velge en størrelse!";
     }
-  }
+  };
 }
 
- /*Same function for drink items. When the button is click the app iterates through a list of all buttons
-  in the class, retrieves each id, and uses that to generate and display relevant info.*/
-  function drinkInfo() {
+/**
+ * Opens the desserts modal.
+ * @param {string} name name of the dessert as it is in the desserts.js
+ */
+function openDessertModal(name) {
+  const dessert = getDessert(name);
 
-    for(var i = 0; i < drinkButtons.length; i++) {
-        var btn = drinkButtons[i];
-        menuitemname = this.id;
+  orderQuantity = 1;
+  displayQuantity.innerHTML = `${orderQuantity}`;
+  itemName.innerHTML = dessert.name;
+  itemPhoto.innerHTML = `<img src="Images/${dessert.image.src}" alt="${dessert.image.src}" id = "menuPhoto" />`;
+  drinkSize.style.display = "none";
+  foodPriceDiv.style.display = "block";
+  foodPriceTxt.innerHTML = `<b>${dessert.price},-</b>`;
 
-        btn.addEventListener('click', displayDrinkInfo, false);
+  //after the user has clicked the button and the info has been generated, the cardview becomes visible
+  displayMenuCard.style.display = "block";
 
-        function displayDrinkInfo(e){
-          orderQuantity = 1;
-          displayQuantity.innerHTML = `${orderQuantity}`;
-          menuitemname = this.id;
-          itemName.innerHTML = `${menuitemname}`;
-          drinkSize.style.display = "block";
-          foodPrice = 0;
-          foodPriceDiv.style.display = "none";
-          itemPhoto.innerHTML = `<img src="Images/${menuitemname}.jpeg" alt="${menuitemname}" id = "menuPhoto"></img>`;
-
-          if(menuitemname === "filterkaffe"){
-            smallPrice = 28;
-            mediumPrice = 32;
-            largePrice = 36;
-          }else if (menuitemname === "cappuccino"){
-            smallPrice = 38;
-            mediumPrice = 42;
-            largePrice = 46;
-          }else if (menuitemname === "americano"){
-            smallPrice = 32;
-            mediumPrice = 36;
-            largePrice = 40;
-          }else if (menuitemname === "iskaffe"){
-            smallPrice = 36;
-            mediumPrice = 42;
-            largePrice = 50;
-          }else if (menuitemname === "caffe mocha"){
-            smallPrice = 38;
-            mediumPrice = 42;
-            largePrice = 46;
-          }else if (menuitemname === "caffe latte"){
-            smallPrice = 38;
-            mediumPrice = 44;
-            largePrice = 48;
-          }else if (menuitemname === "caramel macchiato"){
-            smallPrice = 45;
-            mediumPrice = 48;
-            largePrice = 51;
-          }else if (menuitemname === "espresso"){
-            smallPrice = 34;
-            mediumPrice = 38;
-            largePrice = 42;
-          }else if (menuitemname === "cortado"){
-            smallPrice = 36;
-            mediumPrice = 40;
-            largePrice = 44;
-          }else if (menuitemname === "iste"){
-            smallPrice = 38;
-            mediumPrice = 47;
-            largePrice = 55;
-          }
-
-          smalltext.innerHTML = `Liten<br><b>${smallPrice},-</b>`;
-          mediumtext.innerHTML = `Medium<br><b>${mediumPrice},-</b>`;
-          largetext.innerHTML = `Stor<br><b>${largePrice},-</b>`;
-
-
-          displayMenuCard.style.display = "block";
-      }
-  }
+  // onclick "add to order"
+  document.querySelector("#menuItemFooter").onclick = (event) => {
+    addDessertToCart(name, orderQuantity);
+    closeModal();
+  };
 }
+
+
+
+/**
+ * Set active class to element and remove to all other classes specified
+ * @param {HTMLElement} selectedItem element to add active class to
+ * @param {string} clearActiveClass class of elements to remove active class element to
+ */
+function setActive(selectedItem, clearActiveClass) {
+  document
+    .querySelectorAll(`.${clearActiveClass}`)
+    .forEach((element) => element.classList.remove("active"));
+  selectedItem.classList.add("active");
+}
+
+/**
+ * Close the modal. Clears errors and selected drink sizes.
+ */
+function closeModal() {
+  displayMenuCard.style.display = "none";
+  error.innerHTML = "";
+  document
+    .querySelectorAll(`.size-btn`)
+    .forEach((element) => element.classList.remove("active"));
+}
+
 
 //Close card view when exit button is clicked
-span.onclick = function() {
-  displayMenuCard.style.display = "none";
-}
+closeButton.onclick = function () {
+  closeModal();
+};
 
 //Close card view when you click outside of the card
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == displayMenuCard) {
-    displayMenuCard.style.display = "none";
+    closeModal();
   }
-}
+};
 
-//Functions for adding or subtracting the amount of items you want to order
-function subtractQuantity(){
+/**
+ * subtract the amount of items you want to order
+ * */
+function subtractQuantity() {
   if (orderQuantity === 1) {
     error.innerHTML = "Antall kan ikke være lavere enn 1!";
   } else {
@@ -174,27 +160,11 @@ function subtractQuantity(){
   }
 }
 
-function addQuantity(){
-    orderQuantity++;
-    displayQuantity.innerHTML = `${orderQuantity}`;
-    error.innerHTML = "";
+/**
+ * add the amount of items you want to order
+ * */
+function addQuantity() {
+  orderQuantity++;
+  displayQuantity.innerHTML = `${orderQuantity}`;
+  error.innerHTML = "";
 }
-
-addBtn.onclick = addQuantity;
-subtractBtn.onclick = subtractQuantity;
-
-
-//setUserId("test");
-
-// Add a drink to order.
-
-// First get all drink buttons (with data-type=drink)
-const drinkButtons = document.querySelectorAll('[data-type=drink]'); 
-
-// Add event listener onclick. Send name and size to local storage.
-drinkButtons
-  .forEach((drinkbutton) => 
-    drinkbutton.addEventListener("click", (click) => 
-       addDrinkToCart(click.target.name, "medium") // TODO: use in modal
-    )
-);

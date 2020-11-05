@@ -39,15 +39,16 @@ export function setUserId(userId) {
  * Adds a drink to the cart for the current logged in user.
  * 
  * @param {string} name name of the drink how it appears in the drinks.js data structure
- * @param {string} size size of the drink. Allowed values are: small, medium, large
+ * @param {string} size size of the drink. Allowed values are: small, medium, large,
+ * @param {number} quantity number of drinks to add to cart 
  */
-export function addDrinkToCart(name, size) {
+export function addDrinkToCart(name, size, quantity) {
     const drink = getDrink(name);
     addToCart(getUserId() ,{
         key: drink.name,
         price: drink.size[size].price,
         description: `${drink.name} - ${drink.size[size].name}`
-    });
+    }, quantity);
 }
 
 /**
@@ -55,7 +56,7 @@ export function addDrinkToCart(name, size) {
  * 
  * @param {string} name name of the drink how it appears in the drinks.js data structure
  */
-function getDrink(name) {
+export function getDrink(name) {
     return drinks[name];
 }
 
@@ -66,14 +67,15 @@ function getDrink(name) {
  * Adds a dessert to the cart for the current logged in user.
  * 
  * @param {string} name name of the dessert how it appears in the desserts.js data structure
+ * @param {number} quantity number of desserts to add to cart
  */
-export function addDessertToCart(name) {
+export function addDessertToCart(name, quantity) {
     const dessert = getDessert(name);
-    addToCart(getUserId() ,{
+    addToCart(getUserId(), {
         key: dessert.name,
         price: dessert.price,
-        description: drink.name
-    });
+        description: dessert.name
+    }, quantity);
 }
 
 /**
@@ -81,7 +83,7 @@ export function addDessertToCart(name) {
  * 
  * @param {string} name name of the drink how it appears in the drinks.js data structure
  */
-function getDessert(name) {
+export function getDessert(name) {
     return desserts[name];
 }
 
@@ -93,13 +95,14 @@ function getDessert(name) {
  * 
  * @param {string} userId to which user id to add to its cart
  * @param {string} item either a drink (drinks.js) or dessert (desserts.js) 
+ * @param {number} quantity number of items in order 
  */
-function addToCart(userId, item) {
+function addToCart(userId, item, quantity = 1) {
     const order = getOrderByUserId(userId);
     const orderLines = [...order?.orderLines ?? [], {
         key: item.key,
-        quantity: 1,
-        price: item.price,
+        quantity: quantity,
+        price: (item.price * quantity),
         description: item.description
     }];
     const currentTotal = orderLines.map(orderLine => orderLine.price).reduce((prev, next) => prev + next);
