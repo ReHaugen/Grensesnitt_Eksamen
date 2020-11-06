@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("../Login_Page/Images/Test.png");
+    background-image: url("../Login_Page/Images/Bakgrunn.png");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -11,7 +11,7 @@ body {
     width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background: white;
+    background: #ebdccc;
     border-radius: 10%;
     border: 1px solid #7d746a;
 
@@ -50,13 +50,26 @@ form {
     height: 28px;
     border: 1px solid #5E6E66;
     font-size: 16px;
-    padding: 1px;
+    padding-left: 15px;
     width: 100%;
+    font-weight: bold;
+    box-shadow: 4px 4px 2px grey;
+    background-color: white;
+    color: #423d38;
+    border-radius: 30px;
+   
 }
 .btn {
     padding: 10px;
     width: 100%;
-
+    margin: 2px;
+    border-radius: 30px;
+    background-color: #7d746a;
+    color: #423d38;
+    border: 1px solid #7d746a;
+    outline: none;
+    font-weight: bold;
+    box-shadow: 4px 4px 2px grey;
 
 }
 .val_error {

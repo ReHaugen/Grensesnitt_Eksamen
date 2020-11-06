@@ -1,38 +1,21 @@
+
 body {
-    background-image: url("Images/Test.png");
+    background-image: url("Images/Bakgrunn.png");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
+
 #wrapper {
     position: relative;
     height: 600px;
     width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background: white;
+    background: #ebdccc;
     border-radius: 10%;
     border: 1px solid #7d746a;
     animation-name: FadeIn;
     animation-duration: 1s;
-}
-@keyframes FadeIn {
-    0% {
-        visibility: hidden;
-        transform: scale(0.2);
-
-    }
-    25%{
-        visibility: hidden;
-        transform: scale(0.5);
-
-    }
-    100% {
-        animation-delay: 4s;
-        transform: scale(1);
-        visibility: visible;
-    }
-
 }
 #header {
     position: absolute;
@@ -69,18 +52,33 @@ form {
     margin-top: 2px;
     margin-bottom: 10px;
     height: 28px;
+    font-weight: bold;
+    box-shadow: 4px 4px 2px grey;
     border: 1px solid #5E6E66;
+    background-color: white;
+    color: #423d38;
+    border-radius: 30px;
     font-size: 16px;
-    padding: 1px;
+    padding-left: 15px;
     width: 100%;
+
 }
+/*Button Styling: Start*/
 .btn {
     padding: 10px;
     width: 100%;
     margin: 2px;
+    border-radius: 30px;
+    background-color: #7d746a;
+    color: #423d38;
+    border: 1px solid #7d746a;
+    outline: none;
+    font-weight: bold;
+    box-shadow: 4px 4px 2px grey;
 
 
 }
+/*Button Styling: End*/
 .val_error {
     color: #FF1F1F;
 }
@@ -109,7 +107,9 @@ div a {
 #reg-link {
     margin-left: 39%;
 }
+/*Wrapper: End*/
 
+/*Mobil versjon*/
 @media only screen and (max-width: 500px) {
     #wrapper {
         position: relative;

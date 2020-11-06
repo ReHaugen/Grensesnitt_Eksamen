@@ -1,3 +1,8 @@
+body {
+    background-image: url("../../App/Login_Page/Images/login_bakgrunn.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .mainbox {
     display: flex;
     flex-direction: column;
@@ -15,6 +20,10 @@
     height: auto;
     width: 10rem;
 }
+#mainbox {
+    border-radius: 10px;
+    box-shadow: 5px 2px 13px 5px rgba(0,0,0,0.54);
+  }
 
 .logotext-homepage{
     font-family: 'Lobster', cursive;

@@ -1,7 +1,16 @@
+body {
+    background-image: url("../../App/Login_Page/Images/Bakgrunn_Fade.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .mainbox{
     display: flex;
     flex-direction: row;
     padding: 1rem 1;
+}
+#mainbox {
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.57);
+    border-radius: 10px;
 }
 
 .food-button{
@@ -33,6 +42,7 @@
     padding: 1rem;
     border: solid 1px #7d746a;
     box-shadow: 8px 8px 4px grey;
+    border-radius: 10px;
 }
 
 .food-menu{
