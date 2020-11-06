@@ -112,7 +112,7 @@ export function getDessert(name) {
  * @param {number} quantity number of items in order
  */
 function addToCart(userId, item, quantity = 1) {
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   const orderLines = [
     ...(order?.orderLines ?? []),
     {
@@ -146,7 +146,7 @@ function addToCart(userId, item, quantity = 1) {
  */
 export function removeOrderLineForLoggedInUser(key) {
   const userId = getUserId();
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   const orderLines = order.orderLines.filter(
     (orderLine) => orderLine.key !== key
   );
@@ -174,7 +174,7 @@ export function removeOrderLineForLoggedInUser(key) {
  */
 export function updateOrderLineQuantityForLoggedInUser(key, quantity) {
   const userId = getUserId();
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   const orderLines = order.orderLines.map((orderLine) =>
     orderLine.key === key
       ? {
@@ -207,7 +207,7 @@ export function updateOrderLineQuantityForLoggedInUser(key, quantity) {
  */
 export function getCurrentTotalForLoggedInUser() {
   const userId = getUserId();
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   return order.total;
 }
 
@@ -216,7 +216,7 @@ export function getCurrentTotalForLoggedInUser() {
  */
 export function getOrderKeyForLoggedInUser() {
   const userId = getUserId();
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   return order.key;
 }
 
@@ -225,7 +225,7 @@ export function getOrderKeyForLoggedInUser() {
  */
 export function getOrderLinesForLoggedInUser() {
   const userId = getUserId();
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   return order.orderLines;
 }
 /**
@@ -234,9 +234,18 @@ export function getOrderLinesForLoggedInUser() {
  */
 export function getOrderLineForLoggedInUser(key) {
   const userId = getUserId();
-  const orderLines = getOrderByUserId(userId).orderLines;
+  const orderLines = getOrderDraftByUserId(userId).orderLines;
 
   return orderLines.find((orderLine) => orderLine.key === key);
+}
+
+/**
+ * Returns all orders for the current logged in user
+ */
+export function getOrderHistoryForLoggedInUser() {
+  const userId = getUserId();
+  const orders = getOrders();
+  return orders?.filter(order => order.userId === userId) ?? [];
 }
 
 /**
@@ -244,7 +253,7 @@ export function getOrderLineForLoggedInUser(key) {
  *
  * @param {string} userId to which user it concerns
  */
-function getOrderByUserId(userId) {
+function getOrderDraftByUserId(userId) {
   const orders = getDraftOrders();
   return orders[userId];
 }
@@ -255,6 +264,7 @@ function getOrderByUserId(userId) {
 function getDraftOrders() {
   return JSON.parse(localStorage.getItem(localStorageOrdersDraftName));
 }
+
 
 /**
  * Get all orders from the local storage
@@ -289,7 +299,7 @@ function getEmptyDraftOrder() {
  */
 export function changeOrderStatusToInProgress() {
   const userId = getUserId();
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
 
   // Move from draft orders to orders
   localStorage.setItem(

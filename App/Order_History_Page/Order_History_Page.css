@@ -1,0 +1,19 @@
+.order {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.order .title {
+  margin: 0;
+  text-decoration: underline;
+}
+
+.order .status {
+  font-weight: bold;
+}
+
+.order .sum {
+    margin-top: 0.2rem;
+    text-decoration: underline;
+}

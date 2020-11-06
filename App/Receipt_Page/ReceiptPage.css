@@ -13,18 +13,6 @@
     margin-bottom: 1rem;
 }
 
-.sumwrapper p {
-    margin: 0;
-}
-
-.sumwrapper .dots {
-    margin-top: 0;
-    display: block;
-    border-top: 1px dashed black;
-    margin-left: auto;
-    width: 18rem;
-}
-
 .buttonwrapper{
     display: flex;
     flex-direction: row;
@@ -46,12 +34,4 @@
     flex-direction: row;
     align-items: center;
     margin-bottom: 0.5rem;
-}
-
-.orderLine div {
-    flex-grow: 4;
-}
-
-.orderLine .small-button {
-    margin: 0;
 }
