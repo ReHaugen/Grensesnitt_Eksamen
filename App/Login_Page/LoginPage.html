@@ -9,15 +9,24 @@
 </head>
 
 <body>
-
+    <!--Wrapper: Start-->
     <div id="wrapper" class="wrapper">
+
+        <!--Form: Start-->
         <form method="GET" action="../Login_Page/LoginPage.html" onsubmit="return Validate()" name="vform">
            
+            <!--Header: Start-->
             <div id="header">
                 <h2>EivindsCafé</h2>
             </div>
+            <!--Header: End-->
+
             <div id="img-div"></div>
+            
+            <!--Bakgrunn til inputs: Start-->
             <div id="background_input">
+
+            <!--Inputs: Start-->
             <div>
                 <input type="text" name="username" class="textInput" placeholder="Username">
                 <div id="name_error" class="val_error"></div>
@@ -26,22 +35,34 @@
                 <input type="password" name="password" class="textInput" placeholder="Password">
                 <div id="password_error" class="val_error"></div>
             </div>
+            <!--Bakggrunn til inputs: End-->
+
+            <!--Remember-div: Start-->
             <div id="remember-div">
                 <input type="checkbox">
                 <label>Remember me?</label>
                 <a href="../ForgotPassword_Page/forgotPassword.html">Forgot password?</a>
             </div>
+            <!--Remember-div: End-->
+
+            <!--Button: Start-->
             <div>
                 <input type="submit" value="Login" name="loginBtn" class="btn">
                 <input type="button" value="Guest" name="loginBtn" class="btn">
                 <a id="reg-link" href="../Register_Page/registerPage.html">Create user</a>
             </div>
+            <!--Button: End-->
         </div>
+        <!--Input background: End-->
         </form>
+        <!--Form: End-->
     </div>
+    <!--Wrapper: End-->
 
+    <!--Script links: Start-->
     <script src="../../Domene/common.js" type="module"></script>
     <script src="Script.js" type="module"></script>
+    <!--Script links: End-->
 
 </body>
 

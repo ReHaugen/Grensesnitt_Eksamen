@@ -1,8 +1,10 @@
+
 body {
     background-image: url("Images/Test.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 #wrapper {
     position: relative;
     height: 600px;
@@ -61,6 +63,7 @@ form {
     width: 100%;
 
 }
+/*Button Styling: Start*/
 .btn {
     padding: 10px;
     width: 100%;
@@ -75,6 +78,7 @@ form {
 
 
 }
+/*Button Styling: End*/
 .val_error {
     color: #FF1F1F;
 }
@@ -103,7 +107,9 @@ div a {
 #reg-link {
     margin-left: 39%;
 }
+/*Wrapper: End*/
 
+/*Mobil versjon*/
 @media only screen and (max-width: 500px) {
     #wrapper {
         position: relative;
