@@ -10,6 +10,7 @@ let orderQuantity = 1;
 const displayMenuCard = document.getElementById("menuCard");
 const closeButton = document.getElementsByClassName("close")[0];
 
+const menuPhoto = document.getElementsByClassName("btnPhoto");
 const itemPhoto = document.getElementById("photoContainer");
 const itemName = document.getElementById("itemTitle");
 const foodPriceDiv = document.getElementById("foodPrice");
@@ -41,6 +42,8 @@ foodButtons.forEach((foodButton) =>
     openDessertModal(click.target.name)
   )
 );
+
+
 
 /**
  * Opens the drinks modal.

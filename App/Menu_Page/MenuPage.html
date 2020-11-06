@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="parent">
-            <header class="headerbox"> 
+            <header class="headerbox" id = "menuHeader"> 
                 <a href="../Home_Page/index.html">
                     <h3 class="logotext">EivindCafé</h3> 
                     </a>
@@ -34,34 +34,40 @@
                  </svg> 
             </header>
 
-            <main>
-                <section class="mainbox">
+            <main id = "menuMain"> 
+                <section class="menuMainBox">
+                    <div class = "buttonContainer">
 
-                    <h1 class="normaltext">Drikke:</h1>
+                        <div id = "drinkHeader"><h1 class="normaltext">Drikke:</h1></div>
                     <!-- Drink buttons -->
-                    <button class="drink-button" name="filterkaffe" >FILTERKAFFE</button>
-                    <button class="drink-button" name = "cappuccino">CAPPUCCINO</button>
-                    <button class="drink-button" name = "americano">AMERICANO</button>
-                    <button class="drink-button" name = "iskaffe">ISKAFFE</button>
-                    <button class="drink-button" name = "caffe mocha">CAFFE MOCHA</button>
-                    <button class="drink-button" name = "caffe latte">CAFFE LATTE</button>
-                    <button class="drink-button" name = "caramel macchiato">CARAMEL MACCHIATO</button>
-                    <button class="drink-button" name = "espresso">ESPRESSO</button>
-                    <button class="drink-button" name = "cortado">CORTADO</button>
-                    <button class="drink-button" name = "iste">ISTE</button>
-                     <button class="drink-button" name = "annet">ANNET</button>
+                    <div id = "drinkbtnContainer" class = "btnContainer"> 
+                    <button class="drink-button" name="filterkaffe" ><img src="Images/filterkaffe.jpeg" alt="filterkaffe" class = "btnPhoto"> <p class = "btnTitle">FILTERKAFFE</p><p class = "pricelist">28,- / 32,- / 36,-</p></button>
+                    <button class="drink-button" name = "cappuccino"><img src="Images/cappuccino.jpeg" alt="cappuccino" class = "btnPhoto"> <p class = "btnTitle">CAPPUCCINO</p><p class = "pricelist">38,- / 42,- / 46,-</p></button>
+                    <button class="drink-button" name = "americano"><img src="Images/americano.jpeg" alt="americano" class = "btnPhoto"> <p class = "btnTitle">AMERICANO</p><p class = "pricelist">32,- / 36,- / 40,-</p></button>
+                    <button class="drink-button" name = "iskaffe"><img src="Images/iskaffe.jpeg" alt="iskaffe" class = "btnPhoto"> <p class = "btnTitle">ISKAFFE</p><p class = "pricelist">36,- / 42,- / 50,-</p></button>
+                    <button class="drink-button" name = "caffe mocha"><img src="Images/caffe mocha.jpeg" alt="caffe mocha" class = "btnPhoto"> <p class = "btnTitle">CAFFE MOCHA</p><p class = "pricelist">38,- / 42,- / 46,-</p></button>
+                    <button class="drink-button" name = "caffe latte"><img src="Images/caffe latte.jpeg" alt="caffe latte" class = "btnPhoto"> <p class = "btnTitle">CAFFE LATTE</p><p class = "pricelist">38,- / 44,- / 48,-</p></button>
+                    <button class="drink-button" name = "caramel macchiato"><img src="Images/caramel macchiato.jpeg" alt="caramel macchiato" class = "btnPhoto"> <p class = "btnTitle" id = "cmTitle">CARAMEL MACCHIATO</p><p class = "pricelist" id = "cmPrice">45,- / 48,- / 51,-</p></button>
+                    <button class="drink-button" name = "espresso"><img src="Images/espresso.jpeg" alt="espresso" class = "btnPhoto"> <p class = "btnTitle">ESPRESSO</p><p class = "pricelist">34,- / 38,- / 42,-</p></button>
+                    <button class="drink-button" name = "cortado"><img src="Images/cortado.jpeg" alt="cortado" class = "btnPhoto"> <p class = "btnTitle">CORTADO</p><p class = "pricelist">36,- / 40,- / 44,-</p></button>
+                    <button class="drink-button" name = "iste"><img src="Images/iste.jpeg" alt="iste" class = "btnPhoto"> <p class = "btnTitle">ISTE</p><p class = "pricelist">36,- / 40,- / 44,-</p></button>
+                     <button class="drink-button" name = "annet"><img src="Images/annet.jpeg" alt="annet" class = "btnPhoto"> <p class = "btnTitle">ANNET</p></button>
+                    
 
                    
                     <h1 class="normaltext">Dessert:</h1>
                     <!-- Food buttons -->
-                    <button class="food-button" name = "brownies">BROWNIES</button>
-                    <button class="food-button" name = "oreokake">OREOKAKE</button>
-                    <button class="food-button" name = "kanelbolle" >KANELBOLLE</button>
-                    <button class="food-button" name = "croissant">CROISSANT</button>
-                    <button class="food-button" name = "chiapudding">CHIAPUDDING</button>
-                    <button class="food-button" name ="brioche">BRIOCHE</button>
-                    <button class="food-button" name = "scones">SCONES</button>
-                    <button class="food-button" name = "annet">ANNET</button>
+                    <div id = "foodbtnContainer" class = "btnContainer">
+                    <button class="food-button" name = "brownies"><img src="Images/brownies.jpeg" alt="Brownies" class = "btnPhoto"><p class = "btnTitle">BROWNIES</p><p class = "pricelist">36,- / 40,- / 44,-</p></button>
+                    <button class="food-button" name = "oreokake"><img src="Images/oreokake.jpeg" alt="Oreokake" class = "btnPhoto"><p class = "btnTitle">OREOKAKE</p><p class = "pricelist">36,- / 40,- / 44,-</p></button>
+                    <button class="food-button" name = "kanelbolle" ><img src="Images/kanelbolle.jpeg" alt="Kanelbolle" class = "btnPhoto"><p class = "btnTitle">KANELBOLLE</p><p class = "pricelist">36,- / 40,- / 44,-</p></button>
+                    <button class="food-button" name = "croissant"><img src="Images/croissant.jpeg" alt="Croissant" class = "btnPhoto"><p class = "btnTitle">CROISSANT</p><p class = "pricelist">36,- / 40,- / 44,-</p></button>
+                    <button class="food-button" name = "chiapudding"><img src="Images/chiapudding.jpeg" alt="Chiapudding" class = "btnPhoto"><p class = "btnTitle">CHIAPUDDING</p><p class = "pricelist">36,- / 40,- / 44,-</p></button>
+                    <button class="food-button" name ="brioche"><img src="Images/brioche.jpeg" alt="Brioche" class = "btnPhoto"><p class = "btnTitle">BRIOCHE</p><p class = "pricelist">36,- / 40,- / 44,-</p></button>
+                    <button class="food-button" name = "scones"><img src="Images/scones.jpeg" alt="Scones" class = "btnPhoto"><p class = "btnTitle">SCONES</p><p class = "pricelist">36,- / 40,- / 44,-</p></button>
+                    <button class="food-button" name = "annet"><img src="Images/annet.jpeg" alt="Annet" class = "btnPhoto">ANNET</button>
+                    </div>
+                </div>
 
                     <!-- Menu item cardview, main container -->
                     <div id="menuCard" class="menuCardWindow">
@@ -109,6 +115,7 @@
 
                         </div>
                         </div>
+                    </div>
                   
                 </section>
             </main>
