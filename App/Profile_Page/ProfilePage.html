@@ -42,13 +42,11 @@
                         <button class="large-button">ORDREHISTORIKK</button>
                         </a>
 
-                        <button onclick="alertFunction()" class="large-button">ENDRE PROFIL</button>
+                        <button class="large-button alert">ENDRE PROFIL</button>
                         
-                        <button onclick="alertFunction()" class="large-button">INNSTILLINGER</button>
-                      
-                        <a href="../Login_Page/LoginPage.html">
-                        <button class="large-button">LOGG UT</button>
-                        </a>
+                        <button class="large-button alert">INNSTILLINGER</button>
+                          
+                        <button id='logout' class="large-button">LOGG UT</button>
                     </div>
                 </section>
             </main>
@@ -88,8 +86,9 @@
             </footer>
          
         </div>
-
-        <script src="Script.js"></script>
+        
+        <script type="module" src="../../Domene/common.js"></script>
+        <script type="module" src="Script.js"></script>
         
     </body>
 </html>
