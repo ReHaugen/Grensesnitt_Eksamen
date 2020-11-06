@@ -2,8 +2,16 @@ import drinks from "./drinks.js";
 import desserts from "./desserts.js";
 
 // Constants
+
 const localStorageOrdersName = "orders";
+const localStorageOrdersDraftName = "orders-draft"; // Orders in draft is stored here. Not shown in "Kassasystem"
 const localStorageUserIdName = "userId";
+
+const orderStatus = {
+  DRAFT: "Kladd",
+  IN_PROGRESS: "Tilberedes på kjøkkenet",
+  DONE: "Ferdig",
+};
 
 // User management
 
@@ -24,13 +32,10 @@ function getUserId() {
 export function setUserId(userId) {
   localStorage.setItem(localStorageUserIdName, userId);
   localStorage.setItem(
-    localStorageOrdersName,
+    localStorageOrdersDraftName,
     JSON.stringify({
-      ...getOrders(),
-      [userId]: {
-        total: 0,
-        orderLines: [],
-      },
+      ...getDraftOrders(),
+      [userId]: getEmptyDraftOrder(),
     })
   );
 }
@@ -123,10 +128,11 @@ function addToCart(userId, item, quantity = 1) {
     .reduce((prev, next) => prev + next);
 
   localStorage.setItem(
-    localStorageOrdersName,
+    localStorageOrdersDraftName,
     JSON.stringify({
-      ...getOrders,
+      ...getDraftOrders,
       [userId]: {
+        ...order,
         total: currentTotal,
         orderLines: orderLines,
       },
@@ -149,9 +155,9 @@ export function removeOrderLineForLoggedInUser(key) {
     .reduce((prev, next) => prev + next, 0);
 
   localStorage.setItem(
-    localStorageOrdersName,
+    localStorageOrdersDraftName,
     JSON.stringify({
-      ...getOrders,
+      ...getDraftOrders,
       [userId]: {
         ...order,
         total: currentTotal,
@@ -183,9 +189,9 @@ export function updateOrderLineQuantityForLoggedInUser(key, quantity) {
     .reduce((prev, next) => prev + next, 0);
 
   localStorage.setItem(
-    localStorageOrdersName,
+    localStorageOrdersDraftName,
     JSON.stringify({
-      ...getOrders,
+      ...getDraftOrders,
       [userId]: {
         ...order,
         total: currentTotal,
@@ -203,6 +209,15 @@ export function getCurrentTotalForLoggedInUser() {
   const userId = getUserId();
   const order = getOrderByUserId(userId);
   return order.total;
+}
+
+/**
+ * Gets the order key for the logged in user
+ */
+export function getOrderKeyForLoggedInUser() {
+  const userId = getUserId();
+  const order = getOrderByUserId(userId);
+  return order.key;
 }
 
 /**
@@ -230,8 +245,15 @@ export function getOrderLineForLoggedInUser(key) {
  * @param {string} userId to which user it concerns
  */
 function getOrderByUserId(userId) {
-  const orders = JSON.parse(localStorage.getItem(localStorageOrdersName));
+  const orders = getDraftOrders();
   return orders[userId];
+}
+
+/**
+ * Get all draft orders from the local storage
+ */
+function getDraftOrders() {
+  return JSON.parse(localStorage.getItem(localStorageOrdersDraftName));
 }
 
 /**
@@ -239,6 +261,57 @@ function getOrderByUserId(userId) {
  */
 function getOrders() {
   return JSON.parse(localStorage.getItem(localStorageOrdersName));
+}
+
+/**
+ * Get order by key
+ * @param {string} key 
+ */
+export function getOrderByKey(key) {
+  return getOrders().find(order => order.key === key);
+}
+
+/**
+ * Gets an empty order draft with an unique key identifier
+ */
+function getEmptyDraftOrder() {
+  return {
+    key: generateUUID(),
+    total: 0,
+    orderLines: [],
+    orderStatus: orderStatus.DRAFT,
+  };
+}
+
+/**
+ * Change the status for an order from DRAFT to IN_PROGRESS for the currently logged in user.
+ * Moves the order from 'order-draft' to 'order' and gives the order an unique key.
+ */
+export function changeOrderStatusToInProgress() {
+  const userId = getUserId();
+  const order = getOrderByUserId(userId);
+
+  // Move from draft orders to orders
+  localStorage.setItem(
+    localStorageOrdersName,
+    JSON.stringify([
+      ...(getOrders() ?? []),
+      {
+        ...order,
+        orderStatus: orderStatus.IN_PROGRESS,
+        userId: userId,
+      },
+    ])
+  );
+
+  // remove draft order
+  localStorage.setItem(
+    localStorageOrdersDraftName,
+    JSON.stringify({
+      ...getDraftOrders(),
+      [userId]: getEmptyDraftOrder(),
+    })
+  );
 }
 
 /**
