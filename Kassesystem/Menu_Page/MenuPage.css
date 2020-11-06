@@ -1,5 +1,5 @@
 body {
-    background-image: url(../../App/Login_Page/Images/Bakgrunn_Fade.png);
+    background-image: url("../../App/Login_Page/Images/Bakgrunn_Fade.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
