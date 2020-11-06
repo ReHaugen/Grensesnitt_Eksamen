@@ -208,20 +208,20 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   
   /* exit cardview button */
   .close {
-    color: #aaa;
+    color: rgb(158, 98, 98);
     float: right;
     position: absolute;
     left: 258px;
     top: 18px;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
   }
   
   .close:hover,
   .close:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
   }
 
 

@@ -4,6 +4,8 @@ import {
   getOrderLinesForLoggedInUser,
   getOrderLineForLoggedInUser,
   updateOrderLineQuantityForLoggedInUser,
+  changeOrderStatusToInProgress,
+  getOrderKeyForLoggedInUser
 } from "../../Domene/common.js";
 
 // Set the current total on page load
@@ -91,4 +93,25 @@ function replaceOrderLineEvent(element, orderLine) {
  */
 function updateTotal() {
   totalElement.innerHTML = `${getCurrentTotalForLoggedInUser()}`;
+}
+
+// Add event listeners to pay buttons
+document.querySelectorAll('[name=pay]').forEach(element => {
+  if(orderLines.length == 0) {
+    element.style.cursor = "not-allowed";
+  }   
+  element.onclick = () => payForOrder()
+});
+
+function payForOrder() {
+  if(orderLines.length == 0) {
+    alert('Du må legge noe inn i handlekurven for å kunne betale');
+  } else {
+    const consentToPay = confirm(`Er du sikker på at du vil betale ${getCurrentTotalForLoggedInUser()} kr for orderen?`);
+    if(consentToPay) {
+      const orderKey = getOrderKeyForLoggedInUser();
+      changeOrderStatusToInProgress();
+      window.location.replace(`../Receipt_Page/ReceiptPage.html?order=${orderKey}`);
+    }
+  }
 }

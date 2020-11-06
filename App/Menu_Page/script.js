@@ -32,14 +32,14 @@ subtractBtn.onclick = subtractQuantity;
 // Add event listener onclick. Get the drink from the data structure and open modal.
 drinkButtons.forEach((drinkbutton) =>
   drinkbutton.addEventListener("click", (click) =>
-    openDrinkModal(click.target.name)
+    openDrinkModal(drinkbutton.name)
   )
 );
 
 // Add event listener onclick. Get the dessert from the data structure and open modal.
 foodButtons.forEach((foodButton) =>
   foodButton.addEventListener("click", (click) =>
-    openDessertModal(click.target.name)
+    openDessertModal(foodButton.name)
   )
 );
 
