@@ -83,16 +83,30 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 
 <a name="requirements"></a>
 ## Requirements and installation:
+* Online browser
+* Mobile device/desktop/laptop
 
+* Access to Github. To compile this project, you need to clone/download it from Github. 
+* You can either clone this repository to your local machine by using Github and clone it into a folder, or you can download the whole project as a zip file, then unpack the file. 
 
 <a name="mobile"></a>
 ## Mobile support
+...
 
 <a name="technology"></a>
 ## Technology used
+* To create this project we have used different technologies to make it look good and work smooth:
+* Storing and retrieving information in local storage. 
+...
 
 <a name="code"></a>
 ## Code style
+* Standard.
+* JavaScript files are stored with ".js", in scripts folder.
+* HTML files are stored with ".html".
+* CSS files are stored with ".css". 
+* CamelCase on filenames. 
+* Descriptive and short names of the content of the file. 
 
 ### JavaScript
 *
