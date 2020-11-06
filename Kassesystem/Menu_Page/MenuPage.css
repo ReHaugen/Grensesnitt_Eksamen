@@ -1,9 +1,18 @@
+body {
+    background-image: url(../../App/Login_Page/Images/Bakgrunn_Fade.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .mainbox {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10rem 0;
+}
+#mainbox {
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.57);
+    border-radius: 10px;
 }
 
 .ordre-button{

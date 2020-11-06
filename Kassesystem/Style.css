@@ -108,7 +108,7 @@ main {
   margin-right: auto;
   padding: 1rem;
   border: solid 1px #7d746a;
-  box-shadow: 8px 8px 4px grey;
+  /*box-shadow: 8px 8px 4px grey;*/
 }
 
 .styledinput {
