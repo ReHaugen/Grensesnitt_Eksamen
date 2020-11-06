@@ -9,15 +9,19 @@
 </head>
 
 <body>
+    <!--Wrapper: Start-->
     <div id="wrapper">
         <form method="GET" action="../Menu_Page/MenuPage.html" onsubmit="return Validate()" name="vform">
-           
+           <!--Header: Start-->
             <div id="header">
                 <h2>EivindsCafé</h2>
             </div>
+            <!--Header: End-->
             <div id="img-div"></div>
 
+            <!--Input background: Start-->
             <div id="background_input">
+            <!--Input: Start-->
             <div>
                 <input type="text" name="name" class="textInput" placeholder="Name">
                 <div id="name_error" class="val_error"></div>
@@ -38,15 +42,19 @@
                 <input type="password" name="password" class="textInput" placeholder="Password">
                 <div id="password_error" class="val_error"></div>
             </div>
-           
+            <!--Input: End-->
+           <!--Button: Start-->
             <div>
                 <input type="submit" value="Create User" name="loginBtn" class="btn">
                 <button id="backBtn" class="btn" onclick="document.location='../Login_Page/LoginPage.html'">Back</button> 
             </div>
+            <!--Button: End-->
         </div>
+        <!--Input background: End-->
         </form>
+        <!--Form: End-->
     </div>
-    
+    <!--Wrapper: End-->
     <script src="Script.js" type="text/javascript"></script>
 </body>
 
