@@ -40,6 +40,26 @@ export function setUserId(userId) {
   );
 }
 
+/**
+ * Check whether the user is logged in
+ */
+function isLoggedIn() {
+  return getUserId() ? true : false
+}
+
+/**
+ * If user is not logged in, redirect to login page..
+ */
+export function checkLoginOrRedirect() {
+  if(!isLoggedIn()) {
+    window.location.replace(`../Login_Page/LoginPage.html`);
+  }
+}
+
+export function logout() {
+  localStorage.removeItem(localStorageUserIdName)
+}
+
 // Drink management
 
 /**

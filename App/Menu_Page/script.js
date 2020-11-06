@@ -3,7 +3,11 @@ import {
   addDessertToCart,
   getDrink,
   getDessert,
+  checkLoginOrRedirect
 } from "../../Domene/common.js";
+
+// redirects user to login screen if not logged in.
+checkLoginOrRedirect();
 
 let orderQuantity = 1;
 

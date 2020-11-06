@@ -1,8 +1,10 @@
 import {
-  getCurrentTotalForLoggedInUser,
-  getOrderLinesForLoggedInUser,
   getOrderByKey,
+  checkLoginOrRedirect
 } from "../../Domene/common.js";
+
+// redirects user to login screen if not logged in.
+checkLoginOrRedirect();
 
 const urlParams = new URLSearchParams(window.location.search);
 const orderKey = urlParams.get("order");

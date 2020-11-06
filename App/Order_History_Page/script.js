@@ -1,4 +1,8 @@
-import { getOrderHistoryForLoggedInUser } from "../../Domene/common.js";
+import { getOrderHistoryForLoggedInUser, checkLoginOrRedirect } from "../../Domene/common.js";
+
+// redirects user to login screen if not logged in.
+checkLoginOrRedirect();
+
 
 const orders = getOrderHistoryForLoggedInUser();
 const orderHistoryElement = document.querySelector("#orders");
