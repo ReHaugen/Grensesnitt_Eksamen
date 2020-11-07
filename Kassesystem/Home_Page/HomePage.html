@@ -47,23 +47,27 @@
           </div>
 
           <div class="login-homepage-username">
-            <input class="styledinput" type="text" placeholder="ANSATTNUMMER" />
+            <input class="styledinput" type="text" name="username" placeholder="ANSATTNUMMER" />
+            <div id="name_error" class="val_error normaltext"></div>
           </div>
 
           <div class="login-homepage-password">
-            <input class="styledinput" type="password" placeholder="PASSORD" />
+            <input class="styledinput" type="password" name="password" placeholder="PASSORD" />
+            <div id="password_error" class="val_error normaltext"></div>
           </div>
 
           <div class="login-homepage-button">
-            <a href="../Menu_Page/MenuPage.html">
-              <button class="large-button">LOGG INN</button>
-            </a>
+              <button class="large-button" name="loginBtn">LOGG INN</button>
           </div>
           
         </section>
       </main>
 
       <footer></footer>
+
+      <script type="module" src="./script.js"></script>
+
+
     </div>
   </body>
 </html>
