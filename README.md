@@ -10,7 +10,6 @@ Semester task - DS3801 Grensesnittdesign - Kristiania University College.
 4. [Logo. ](#logo)
 5. [Class description. ](#classdescription)
 6. [Technology used. ](#technology) 
-7. [Code style. ](#code)
 
 <a name="start"></a>
 ## Quick start:
@@ -83,23 +82,6 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 ## Technology used
 * To create this project we have used different technologies to make it look good and work smooth:
 * Storing and retrieving information in local storage. 
-* CSS3: Flexbox, grid, psuedo elements  
-* HTML5: Syntax elements 
-
-<a name="code"></a>
-## Code style
-* Standard.
-* JavaScript files are stored with ".js", in scripts folder.
-* HTML files are stored with ".html".
-* CSS files are stored with ".css". 
-* CamelCase on filenames. 
-* Descriptive and short names of the content of the file. 
-
-### JavaScript
-*
-
-### HTML
-*
-
-### CSS
-*
+* CSS3: Flexbox, grid, psuedo elements.  
+* HTML5: Syntax elements. 
+* Vanilla JavaScript: ES6, modules. 
