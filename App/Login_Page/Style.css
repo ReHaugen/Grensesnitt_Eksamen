@@ -11,11 +11,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    padding: 5rem 1rem 0 1rem;
+    padding: 2rem 1rem 0 1rem;
 }
 
 #wrapper {
-    height: 85vh;
+    height: 90vh;
     max-width: 50rem;
     margin: 0 auto;
 
@@ -110,5 +110,5 @@ div a {
 }
 
 #login-div {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
