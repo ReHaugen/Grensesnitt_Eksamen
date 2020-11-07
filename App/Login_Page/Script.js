@@ -16,13 +16,13 @@ const password_error = document.getElementById("password_error");
 loginBtn.onclick = () => {
     if(isValid()) {
         setUserId(username.value);
-        window.location.replace('../Home_Page/index.html');
+        window.location.replace('../Menu_Page/MenuPage.html');
     } 
 }
 
 loginGuestBtn.onclick = () => {
     setUserId("GJEST");
-    window.location.replace('../Home_Page/index.html'); 
+    window.location.replace('../Menu_Page/MenuPage.html'); 
 }
 
 //Validate function
