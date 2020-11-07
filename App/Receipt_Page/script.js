@@ -30,6 +30,7 @@ function createOrderLineElement(orderLine) {
   titleElement.classList.add("normaltext");
   titleElement.classList.add("title");
   titleElement.innerHTML = `${orderLine.quantity}x ${orderLine.description}, ${orderLine.price} kr`;
+  element.appendChild(titleElement);
 
   // Other text
   if (orderLine.other && orderLine.other.length !== 0) {
@@ -40,7 +41,6 @@ function createOrderLineElement(orderLine) {
     element.appendChild(otherElement);
   }
 
-  element.appendChild(titleElement);
   return element;
 }
 
