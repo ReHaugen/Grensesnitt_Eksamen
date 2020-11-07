@@ -10,7 +10,8 @@ const localStorageUserIdName = "userId";
 const orderStatus = {
   DRAFT: "Kladd",
   IN_PROGRESS: "Tilberedes på kjøkkenet",
-  DONE: "Ferdig",
+  DONE: "Ferdig ✅",
+  CANCELLED: "Kansellert ❌"
 };
 
 // User management
@@ -277,6 +278,7 @@ export function getOrderHistoryForLoggedInUser() {
   return orders?.filter(order => order.userId === userId) ?? [];
 }
 
+
 /**
  * Gets the current order for the specified user from local storage.
  *
@@ -294,11 +296,15 @@ function getDraftOrders() {
   return JSON.parse(localStorage.getItem(localStorageOrdersDraftName));
 }
 
+export function getOrdersInProgress() {
+  const orders = getOrders();
+  return orders.filter((order) => order.orderStatus === orderStatus.IN_PROGRESS);
+}
 
 /**
  * Get all orders from the local storage
  */
-function getOrders() {
+export function getOrders() {
   return JSON.parse(localStorage.getItem(localStorageOrdersName));
 }
 
@@ -350,6 +356,30 @@ export function changeOrderStatusToInProgress() {
       ...getDraftOrders(),
       [userId]: getEmptyDraftOrder(),
     })
+  );
+}
+
+/**
+ * Change the status from IN_PROGRESS to CANCELLED
+ * @param {string} key the key identifyer for the order
+ */
+export function changeOrderStatusToCancelled(key) {
+  const orders = getOrders().map((order) => order.key === key ? { ...order, orderStatus: orderStatus.CANCELLED } : order)
+  localStorage.setItem(
+    localStorageOrdersName,
+    JSON.stringify([...orders])
+  );
+}
+
+/**
+ * Change the status from IN_PROGRESS to DONE
+ * @param {string} key the key identifyer for the order
+ */
+export function changeOrderStatusToDone(key) {
+  const orders = getOrders().map((order) => order.key === key ? { ...order, orderStatus: orderStatus.DONE } : order)
+  localStorage.setItem(
+    localStorageOrdersName,
+    JSON.stringify([...orders])
   );
 }
 
