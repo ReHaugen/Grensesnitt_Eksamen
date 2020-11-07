@@ -79,7 +79,7 @@ export function logout() {
  * @param {string} size size of the drink. Allowed values are: small, medium, large,
  * @param {number} quantity number of drinks to add to cart
  */
-export function addDrinkToCart(name, size, quantity) {
+export function addDrinkToCart(name, size, quantity, other) {
   const drink = getDrink(name);
   addToCart(
     getUserId(),
@@ -87,6 +87,7 @@ export function addDrinkToCart(name, size, quantity) {
       key: generateUUID(),
       price: drink.size[size].price,
       description: `${drink.name} - ${drink.size[size].name}`,
+      other: other
     },
     quantity
   );
@@ -109,7 +110,7 @@ export function getDrink(name) {
  * @param {string} name name of the dessert how it appears in the desserts.js data structure
  * @param {number} quantity number of desserts to add to cart
  */
-export function addDessertToCart(name, quantity) {
+export function addDessertToCart(name, quantity, other) {
   const dessert = getDessert(name);
   addToCart(
     getUserId(),
@@ -117,6 +118,7 @@ export function addDessertToCart(name, quantity) {
       key: generateUUID(),
       price: dessert.price,
       description: dessert.name,
+      other: other
     },
     quantity
   );
@@ -151,6 +153,7 @@ function addToCart(userId, item, quantity = 1) {
       singlePrice: item.price,
       price: item.price * quantity,
       description: item.description,
+      other: item.other
     },
   ];
   const currentTotal = orderLines

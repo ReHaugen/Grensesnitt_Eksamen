@@ -26,6 +26,7 @@ const largetext = document.getElementById("largetxt");
 const addBtn = document.getElementById("add_btn");
 const displayQuantity = document.getElementById("quantityCounter");
 const subtractBtn = document.getElementById("subtract_btn");
+const otherInput = document.getElementById('other_input');
 const drinkButtons = document.querySelectorAll(".drink-button");
 const foodButtons = document.querySelectorAll(".food-button");
 
@@ -83,7 +84,7 @@ function openDrinkModal(name) {
   // onclick "add to order"
   document.querySelector("#menuItemFooter").onclick = (event) => {
     if (selectedSize) {
-      addDrinkToCart(name, selectedSize, orderQuantity);
+      addDrinkToCart(name, selectedSize, orderQuantity, otherInput.value);
       closeModal();
     } else {
       error.innerHTML = "Du må velge en størrelse!";
@@ -111,7 +112,7 @@ function openDessertModal(name) {
 
   // onclick "add to order"
   document.querySelector("#menuItemFooter").onclick = (event) => {
-    addDessertToCart(name, orderQuantity);
+    addDessertToCart(name, orderQuantity, otherInput.value);
     closeModal();
   };
 }
@@ -136,6 +137,7 @@ function setActive(selectedItem, clearActiveClass) {
 function closeModal() {
   displayMenuCard.style.display = "none";
   error.innerHTML = "";
+  otherInput.value = "";
   document
     .querySelectorAll(`.size-btn`)
     .forEach((element) => element.classList.remove("active"));

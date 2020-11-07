@@ -377,6 +377,16 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
     letter-spacing: normal;
   }
 
+  #otherDiv {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  #otherDiv .styledinput {
+    width: 100%;
+    text-align: center;
+  }
+
   .active {
     border: 5px solid #423d38;
   }

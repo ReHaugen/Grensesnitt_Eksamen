@@ -5,7 +5,6 @@ import {
   getOrderLineForLoggedInUser,
   updateOrderLineQuantityForLoggedInUser,
   changeOrderStatusToInProgress,
-  getOrderKeyForLoggedInUser,
 } from "../../Domene/common.js";
 
 // Set the current total on page load
@@ -31,6 +30,7 @@ export function createOrderLineElement(orderLine) {
 
   const titleElement = document.createElement("div");
   titleElement.classList.add("normaltext");
+  titleElement.classList.add("title");
   titleElement.innerHTML = `${orderLine.quantity}x ${orderLine.description}, ${orderLine.price} kr`;
 
   const xButton = document.createElement("button");
@@ -77,10 +77,23 @@ export function createOrderLineElement(orderLine) {
     updateTotal();
   };
 
+  const buttonContainer = document.createElement('div')
+  buttonContainer.appendChild(subtractButton);
+  buttonContainer.appendChild(addButton);
+  buttonContainer.appendChild(xButton);
+
   element.appendChild(titleElement);
-  element.appendChild(subtractButton);
-  element.appendChild(addButton);
-  element.appendChild(xButton);
+  element.appendChild(buttonContainer)
+  
+
+   // Other text
+   if(orderLine.other && orderLine.other.length !== 0) {
+    const otherElement = document.createElement('div')
+    otherElement.innerHTML = `* ${orderLine.other}`
+    otherElement.classList.add('normaltext');
+    otherElement.classList.add('other');
+    element.appendChild(otherElement);
+  }
 
   return element;
 }

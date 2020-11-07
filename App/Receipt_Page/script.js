@@ -1,7 +1,4 @@
-import {
-  getOrderByKey,
-  checkLoginOrRedirect
-} from "../../Domene/common.js";
+import { getOrderByKey, checkLoginOrRedirect } from "../../Domene/common.js";
 
 // redirects user to login screen if not logged in.
 checkLoginOrRedirect();
@@ -31,7 +28,17 @@ function createOrderLineElement(orderLine) {
 
   const titleElement = document.createElement("div");
   titleElement.classList.add("normaltext");
+  titleElement.classList.add("title");
   titleElement.innerHTML = `${orderLine.quantity}x ${orderLine.description}, ${orderLine.price} kr`;
+
+  // Other text
+  if (orderLine.other && orderLine.other.length !== 0) {
+    const otherElement = document.createElement("div");
+    otherElement.innerHTML = `* ${orderLine.other}`;
+    otherElement.classList.add("normaltext");
+    otherElement.classList.add("other");
+    element.appendChild(otherElement);
+  }
 
   element.appendChild(titleElement);
   return element;
