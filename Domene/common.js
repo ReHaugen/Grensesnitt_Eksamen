@@ -56,6 +56,15 @@ export function checkLoginOrRedirect() {
   }
 }
 
+/**
+ * If user is not logged in, redirect to login page..
+ */
+export function checkLoginOrRedirectKasseSystem() {
+  if(!isLoggedIn()) {
+    window.location.replace(`../Home_Page/HomePage.html`);
+  }
+}
+
 export function logout() {
   localStorage.removeItem(localStorageUserIdName)
 }
