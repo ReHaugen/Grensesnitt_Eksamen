@@ -9,28 +9,26 @@ Semester task - DS3801 Grensesnittdesign - Kristiania University College.
 3. [Concept and prototype. ](#concept)
 4. [Logo. ](#logo)
 5. [Class description. ](#classdescription)
-6. [Requirements and installation. ](#requirements)
-7. [Mobile support. ](#mobile)
-8. [Technology used. ](#technology) 
-9. [Code style. ](#code)
+6. [Technology used. ](#technology) 
+7. [Code style. ](#code)
 
 <a name="start"></a>
 ## Quick start:
 * Clone the repositiry to your local machine. 
 * Open the folder where you saved the repository.
-* For the app, open LoginPage.html
-* For the cash register system, open HomePage.html
+* Open index.html in your favourite browser.
+* NB. For the best user experience, open the app [in mobile version mode](https://www.cqlcorp.com/insights/how-to-view-the-mobile-version-of-a-website-on-your-desktop/)
 
 <a name="about"></a>
 ## About the project:
 * The project started 07.09.2020 and lasted to 09.11.2020.
 * We are three students collaborating on this exam project. 
 * In this assignment, we will create a cash register system for employees and an app for customers in Eivind's café. The solution we create will be intuitive, efficient and simple to understand and use. 
-* The target group is students, because they often but coffee on the go, work in cafes and use cafes when they study. Therefore, we have tried to get a stylish and consistent design. But ff course we want the solution to be used by everyone, so the main focus is simplicity.
+* The target group is students, because they often but coffee on the go, work in cafes and use cafes when they study. Therefore, we have tried to get a stylish and consistent design. But of course we want the solution to be used by everyone, so the main focus is simplicity.
 * We strive to meet the users expectations and needs, as quickly and dependably as possible.
-* In the app, which will primarily be used on mobilephones, customers can order certain products or an order that contains several different products. The user can also see an overview of the total price of an order, be able to add more than one item to their order, remove items from the order and see an overview of previous orders. 
+* In the app, which will primarily be used on mobile phones, customers can order certain products or an order that contains several different products. The user can also see an overview of the total price of an order, be able to add more than one item to their order, remove items from the order and see an overview of previous orders. 
 * In the cash register system, which is not primarily on the phone, the employee can choose which employee is logged in, complete orders and see an overview of previous orders. They can also see orders coming from the customers app and tap that it is complete when done.
-* Saving information in Local Storage.
+* The orders, even drafts, are stored in the Local Storage of your web browser.
 
 <a name="concept"></a>
 ## Concept and prototype: 
@@ -48,7 +46,7 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 
 <a name="logo"></a>
 ## Logo: 
-* We think it is important to have a logo to make the page unique, recognizable and works as a kind of jewelry on the page. We did it the easy way and made a logo out of a cool font that we liked called "Lobster" that seemed like a good fit for a cafe. Then we added an icon of coffeebeans. 
+* We think it is important to have a logo to make the page unique, recognizable and it will work as a kind of jewelry on the page. We did it the easy way and made a logo out of a cool font that we liked called "Lobster" that seemed like a good fit for a cafe. Then we added an icon of coffeebeans. 
 * The advantages of using a font and icon as a logo instead of an image - except that it is quick and easy - are that you can style it as you wish. Make it bigger, smaller, with shadows and fit the logo to the different pages. Below you can see the logo how it looks in the front page and in the other pages.  
 * We styled the logo in warm earth tones that blended in perfectly with the rest of the clean design. This gives the page that delicate feeling that reminds us of a good cup of coffee. <br/>
 ![](Images/logo1.png) <br/>
@@ -81,23 +79,12 @@ https://xd.adobe.com/view/d9408b03-aea0-4d67-bcf2-b3519c99ca66-8c13/ <br/>
 
 * **<ins>Order history page: </ins>** When orders are done, they end up here. 
 
-<a name="requirements"></a>
-## Requirements and installation:
-* Online browser
-* Mobile device/desktop/laptop
-
-* Access to Github. To compile this project, you need to clone/download it from Github. 
-* You can either clone this repository to your local machine by using Github and clone it into a folder, or you can download the whole project as a zip file, then unpack the file. 
-
-<a name="mobile"></a>
-## Mobile support
-...
-
 <a name="technology"></a>
 ## Technology used
 * To create this project we have used different technologies to make it look good and work smooth:
 * Storing and retrieving information in local storage. 
-...
+* CSS3: Flexbox, grid, psuedo elements  
+* HTML5: Syntax elements 
 
 <a name="code"></a>
 ## Code style
