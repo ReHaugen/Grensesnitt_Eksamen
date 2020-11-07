@@ -1,7 +1,7 @@
 import { checkLoginOrRedirectKasseSystem, getOrders } from '../../Domene/common.js'
 checkLoginOrRedirectKasseSystem();
 
-const orders = getOrders();
+const orders = getOrders().reverse(); // newest orders on top.
 const orderHistoryElement = document.querySelector("#orders");
 
 if (orders.length === 0) {
@@ -61,7 +61,15 @@ function createOrderLineElement(orderLine) {
   const titleElement = document.createElement("div");
   titleElement.classList.add("normaltext");
   titleElement.innerHTML = `${orderLine.quantity}x ${orderLine.description}, ${orderLine.price} kr`;
-
   element.appendChild(titleElement);
+  
+  // Other text
+  if (orderLine.other && orderLine.other.length !== 0) {
+    const otherElement = document.createElement("div");
+    otherElement.innerHTML = `* ${orderLine.other}`;
+    otherElement.classList.add("normaltext");
+    otherElement.classList.add("other");
+    element.appendChild(otherElement);
+  }
   return element;
 }

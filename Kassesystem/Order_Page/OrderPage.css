@@ -82,14 +82,19 @@ body {
   flex-direction: row;
   align-items: center;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
 }
 
-.orderLine div {
-  flex-grow: 4;
+.orderLine .title {
+  flex-grow: 2;
 }
 
 .orderLine .small-button {
   margin: 0;
+}
+
+.orderLine .other {
+  width: 100%;
 }
 
 
@@ -307,6 +312,16 @@ body {
     text-align: center;
     font-weight: bold;
     letter-spacing: normal;
+  }
+
+  #otherDiv {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  #otherDiv .styledinput {
+    width: 100%;
+    text-align: center;
   }
 
   .active {
