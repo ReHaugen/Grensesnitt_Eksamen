@@ -7,3 +7,29 @@ body {
     box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.57);
     border-radius: 10px;
 }
+
+#orders {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    padding: 1rem;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .order .title {
+    margin: 0;
+    text-decoration: underline;
+  }
+  
+  .order .status {
+    font-weight: bold;
+  }
+  
+  .order .sum {
+      margin-top: 0.2rem;
+      text-decoration: underline;
+  }

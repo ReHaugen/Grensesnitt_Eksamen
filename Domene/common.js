@@ -277,6 +277,7 @@ export function getOrderHistoryForLoggedInUser() {
   return orders?.filter(order => order.userId === userId) ?? [];
 }
 
+
 /**
  * Gets the current order for the specified user from local storage.
  *
@@ -298,7 +299,7 @@ function getDraftOrders() {
 /**
  * Get all orders from the local storage
  */
-function getOrders() {
+export function getOrders() {
   return JSON.parse(localStorage.getItem(localStorageOrdersName));
 }
 
