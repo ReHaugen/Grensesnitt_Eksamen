@@ -6,6 +6,7 @@ body {
 #mainbox {
   box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.57);
   border-radius: 10px;
+  min-height: 500px;
 }
 
 #orders {
@@ -13,6 +14,12 @@ body {
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   padding: 1rem;
+}
+
+#ordersTitle{
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .order {

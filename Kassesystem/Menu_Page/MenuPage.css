@@ -6,6 +6,7 @@ body {
 .mainbox {
     display: flex;
     flex-direction: column;
+    height: 600px;
     justify-content: center;
     align-items: center;
     padding: 10rem 0;
@@ -14,8 +15,12 @@ body {
     -webkit-box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48); 
 box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
     border-radius: 10px;
+    
 }
 
+#btncontainer{
+    display: inline-block;
+}
 .ordre-button{
     margin-bottom: 1rem;
 }
@@ -26,4 +31,11 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
 
 .ordrehistorikk-button{
     margin-bottom: 1rem;
+}
+
+#orderBtn,#activeBtn,#archiveBtn{
+    height: 80px;
+    display: inline-block;
+    margin: 10px auto;
+    font-size: 15px;
 }
