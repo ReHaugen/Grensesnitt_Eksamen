@@ -1,7 +1,10 @@
 # Group 24 ☕️
 Semester task - DS3801 Grensesnittdesign - Kristiania University College. 
 
+## Customer app: 
 ![](Images/app.gif) 
+
+## Cash register system for employees:
 
 ## Table of contents
 1. [Quick start. ](#start)
