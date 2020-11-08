@@ -61,7 +61,6 @@ function openDrinkModal(name) {
   displayQuantity.innerHTML = `${orderQuantity}`;
   itemName.innerHTML = drink.name;
   drinkSize.style.display = "block";
-  foodPrice = 0;
   foodPriceDiv.style.display = "none";
   itemPhoto.innerHTML = `<img src="Images/${drink.image.src}" alt="${drink.image.alt}" id = "menuPhoto" />`;
 
