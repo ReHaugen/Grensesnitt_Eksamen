@@ -1,9 +1,24 @@
-.mainbox {
+#scMain {
+  background-color: #423d38;
+}
+
+.scMainbox {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
   align-content: flex-start;
+  border: solid 4px #ebdccc;
+  background-color: white;
+  height: 550px;
+  padding: 20px;
+}
+
+#scTitle{
+  text-align: center;
+  margin: auto;
+  color: #423d38;
+  
 }
 
 .sumwrapper {

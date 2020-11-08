@@ -11,7 +11,8 @@ body {
     padding: 10rem 0;
 }
 #mainbox {
-    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48); 
+box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
     border-radius: 10px;
 }
 

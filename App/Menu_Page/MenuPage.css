@@ -106,7 +106,7 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   color: #ebdccc;
   text-align: center;
   font-weight: lighter;
-  font-size: 27px;
+  font-size: 25px;
   letter-spacing: 4px;
   display: inline-block;
   
@@ -273,14 +273,20 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   /* Item price, visible for food items only */
   #foodPrice{
     line-height: 10px;
-    top: 50px;
-    margin-bottom: 35px;
+    top: 20px;
+    margin-bottom: 15px;
+    
   }
 
   #pricetxt{
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 5px;
     font-size: 25px;
+  }
+
+  #preferanceTxt
+  {
+    color: #423d38;
   }
 
   /* Item size options and prices, visible for drink items only  */
@@ -400,6 +406,18 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   #otherDiv {
     font-size: 0.8rem;
     line-height: 1.5rem;
+  }
+
+  #other_input{
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: white;
+    color: #423d38;
+    border: 3px solid #ebdccc;
+    font-weight: lighter;
+    
+    text-align: center;
   }
 
   #otherDiv .styledinput {
