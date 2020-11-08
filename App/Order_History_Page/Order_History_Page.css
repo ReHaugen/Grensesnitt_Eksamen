@@ -17,3 +17,12 @@
     margin-top: 0.2rem;
     text-decoration: underline;
 }
+
+#mainbox{
+  max-width: 1000px;
+}
+
+#orderTxt{
+  text-transform: uppercase;
+  text-align: center;
+}

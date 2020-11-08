@@ -11,6 +11,10 @@
     margin-bottom: 2rem;
 }
 
+#mainbox{ 
+    max-width: 1000px;
+}
+
 #PPphoto{
     height: 90px;
     border-radius: 100px;
@@ -21,8 +25,6 @@
     display: block;
     -webkit-box-shadow: -2px 2px 4px 1px rgba(0,0,0,0.26); 
     box-shadow: -2px 2px 4px 1px rgba(0,0,0,0.26);
-    
-
 }
 
 #orders,#changeProfile,#settingsBtn,#logout{
@@ -34,8 +36,6 @@
     border: 3px solid #423d38;
     box-shadow: none;
     margin: 15px;
-
-
 }
 
 

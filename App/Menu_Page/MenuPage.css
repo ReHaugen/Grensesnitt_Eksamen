@@ -26,32 +26,25 @@
   height: 6rem; 
   border: 1px solid #7d746a;
   -webkit-box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48); 
-box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
+  box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
 }
 
 .buttonContainer{
-
   width: 350px;
   margin: auto;
   text-align: center;
-  
-  
-  
 }
 
-#drinkbtnContainer{
-  text-align: center;
-  margin-top: 0px;
-}
-
-#foodbtnContainer{
+#drinkbtnContainer, #foodbtnContainer{
   text-align: center;
   margin-top: 0px;
 }
 
 
 
-.drink-button{
+
+
+.drink-button,.food-button{
   width: 280px;
   height: 80px;
   left: 60px;
@@ -62,19 +55,6 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   margin-bottom: 15px;
   border: 6px solid #ebdccc;
   background-color: #fefefe;
-
-  
-  
-  /*width: 150px;
-  height: 80px;
-  border-radius: 30px;
-  background-color: #7d746a;
-  color: #423d38;
-  border: 1px solid #7d746a;
-  outline: none;
-  font-weight: bold;
-  margin-top: 7px;
-  box-shadow: 4px 4px 2px grey;*/
 }
 
 #drinkHeader{
@@ -86,7 +66,6 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
 
 #foodHeader{
   text-align: center;
-  
   margin: auto;
   margin-top: 0px;
 }
@@ -99,7 +78,6 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   font-size: 25px;
   letter-spacing: -6px;
   display: inline-block;
-  
 }
 
 .menuHeaderTxt{
@@ -109,25 +87,8 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   font-size: 25px;
   letter-spacing: 4px;
   display: inline-block;
-  
   margin-left: 20px;
   margin-right: 10px;
-}
-
-
-
-
-.food-button{
-  width: 280px;
-  height: 80px;
-  left: 60px;
-  margin-left: 30px;
-  display: inline-block;
-  border: 0px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border: 6px solid #ebdccc;
-  background-color: #fefefe;
 }
 
 .btnPhoto{
@@ -139,10 +100,7 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   margin-left: -50px;
   margin-top: -13px;
   border-radius: 100%;
-
   border: 6px solid #ebdccc;
-  
-  
 }
 
 .btnTitle{
@@ -158,13 +116,11 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
 
 #cmTitle{
   line-height: 18px;
-  /*position: absolute;*/
   left: 146px;
   margin-top: 4px;
 }
+
 #cmPrice{
-  
-  
   left: 146px;
   margin-top: -10px;
 }
@@ -180,9 +136,6 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   line-height: 10px;
   color: #7d746a;
 }
-
-
-
 
 
   /**

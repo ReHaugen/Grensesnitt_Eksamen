@@ -7,9 +7,9 @@
 }
 
 .sumwrapper{
-    margin-top: auto; /* Pushes all the items downwards */
+    margin-top: auto; 
     width: 100%;
-    padding-right: 1rem; /* How much right the dots will go */
+    padding-right: 1rem; 
     margin-bottom: 1rem;
 }
 
