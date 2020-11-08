@@ -5,29 +5,26 @@ import {
   getOrderLineForLoggedInUser,
   updateOrderLineQuantityForLoggedInUser,
   changeOrderStatusToInProgress,
-  getOrderKeyForLoggedInUser,
-  checkLoginOrRedirect
 } from "../../Domene/common.js";
-
-// redirects user to login screen if not logged in.
-checkLoginOrRedirect();
 
 // Set the current total on page load
 const totalElement = document.querySelector("#total");
 totalElement.innerHTML = `${getCurrentTotalForLoggedInUser()}`;
 
 const orderLinesElement = document.querySelector("#orderLines");
-const orderLines = getOrderLinesForLoggedInUser();
+let orderLines = getOrderLinesForLoggedInUser();
 orderLines.forEach((orderLine) => {
   const orderLineElement = createOrderLineElement(orderLine);
   orderLinesElement.appendChild(orderLineElement);
 });
 
+payEventListener();
+
 /**
  * Creates an order line element.
  * @param {*} orderLine an order line from the order in local storage
  */
-function createOrderLineElement(orderLine) {
+export function createOrderLineElement(orderLine) {
   const element = document.createElement("div");
   element.classList.add("orderLine");
 
@@ -61,6 +58,8 @@ function createOrderLineElement(orderLine) {
     } else {
       removeOrderLineForLoggedInUser(orderLine.key);
       orderLinesElement.removeChild(element);
+      orderLines = getOrderLinesForLoggedInUser();
+      payEventListener();
     }
     updateTotal();
   };
@@ -85,6 +84,7 @@ function createOrderLineElement(orderLine) {
 
   element.appendChild(titleElement);
   element.appendChild(buttonContainer)
+  
 
    // Other text
    if(orderLine.other && orderLine.other.length !== 0) {
@@ -112,23 +112,48 @@ function updateTotal() {
   totalElement.innerHTML = `${getCurrentTotalForLoggedInUser()}`;
 }
 
-// Add event listeners to pay buttons
-document.querySelectorAll('[name=pay]').forEach(element => {
-  if(orderLines.length == 0) {
-    element.style.cursor = "not-allowed";
-  }   
-  element.onclick = () => payForOrder()
-});
+// Add or replace event listeners to pay buttons
+function payEventListener() {
+  document.querySelectorAll("[name=pay]").forEach((element) => {
+    if (orderLines.length == 0) {
+      element.style.cursor = "not-allowed";
+    } else {
+      element.style.cursor = "pointer";
+    }
+    element.onclick = () => payForOrder();
+  });
+}
 
 function payForOrder() {
-  if(orderLines.length == 0) {
-    alert('Du må legge noe inn i handlekurven for å kunne betale');
+  if (orderLines.length == 0) {
+    alert("Du må legge noe inn i handlekurven for å kunne betale");
   } else {
-    const consentToPay = confirm(`Er du sikker på at du vil betale ${getCurrentTotalForLoggedInUser()} kr for orderen?`);
-    if(consentToPay) {
-      const orderKey = getOrderKeyForLoggedInUser();
+    const consentToPay = confirm(
+      `Er du sikker på at du vil betale ${getCurrentTotalForLoggedInUser()} kr for orderen?`
+    );
+    if (consentToPay) {
       changeOrderStatusToInProgress();
-      window.location.replace(`../Receipt_Page/ReceiptPage.html?order=${orderKey}`);
+      clearPage();
     }
   }
+}
+
+function clearPage() {
+  while (orderLinesElement.firstChild) {
+    orderLinesElement.removeChild(orderLinesElement.lastChild);
+  }
+  updateTotal();
+}
+
+/**
+ * Refresh the entire shopping cart.
+ */
+export function refreshShoppingCart() {
+  orderLines = getOrderLinesForLoggedInUser();
+  payEventListener();
+  clearPage();
+  orderLines.forEach((orderLine) => {
+    const orderLineElement = createOrderLineElement(orderLine);
+    orderLinesElement.appendChild(orderLineElement);
+  });
 }

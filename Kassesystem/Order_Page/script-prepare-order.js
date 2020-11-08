@@ -1,13 +1,13 @@
 import {
+  checkLoginOrRedirectKasseSystem,
   addDrinkToCart,
   addDessertToCart,
   getDrink,
   getDessert,
-  checkLoginOrRedirect
 } from "../../Domene/common.js";
+checkLoginOrRedirectKasseSystem();
 
-// redirects user to login screen if not logged in.
-checkLoginOrRedirect();
+import { refreshShoppingCart } from './script-pay-order.js'
 
 let orderQuantity = 1;
 
@@ -48,8 +48,6 @@ foodButtons.forEach((foodButton) =>
   )
 );
 
-
-
 /**
  * Opens the drinks modal.
  * @param {string} name name of the drink as it is in the drinks.js
@@ -85,6 +83,7 @@ function openDrinkModal(name) {
   document.querySelector("#menuItemFooter").onclick = (event) => {
     if (selectedSize) {
       addDrinkToCart(name, selectedSize, orderQuantity, otherInput.value);
+      refreshShoppingCart();
       closeModal();
     } else {
       error.innerHTML = "Du må velge en størrelse!";
@@ -113,11 +112,10 @@ function openDessertModal(name) {
   // onclick "add to order"
   document.querySelector("#menuItemFooter").onclick = (event) => {
     addDessertToCart(name, orderQuantity, otherInput.value);
+    refreshShoppingCart()
     closeModal();
   };
 }
-
-
 
 /**
  * Set active class to element and remove to all other classes specified
@@ -142,7 +140,6 @@ function closeModal() {
     .querySelectorAll(`.size-btn`)
     .forEach((element) => element.classList.remove("active"));
 }
-
 
 //Close card view when exit button is clicked
 closeButton.onclick = function () {

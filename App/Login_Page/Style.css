@@ -1,101 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
 
 body {
     background-image: url("Images/Bakgrunn.png");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    padding: 2rem 1rem 0 1rem;
 }
 
 #wrapper {
-    position: relative;
-    height: 600px;
-    width: 400px;
-    margin: 50px auto;
-    padding: 20px;
+    height: 90vh;
+    max-width: 50rem;
+    margin: 0 auto;
+
     background: #ebdccc;
-    border-radius: 10%;
+    border-radius: 0.5rem;
     border: 1px solid #7d746a;
     animation-name: FadeIn;
     animation-duration: 1s;
 }
+
 #header {
-    position: absolute;
-    top: 10%;
-    right: 15%;
-    width: 300px;
-    height: 50px;
-    background-color: #7d746a;
-    border-radius: 5px;
     text-align: center;
-    
-    
 }
-div h2 {
-    font-size: 25px;
-    line-height: 10px;
-    
+
+#header h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+    color: #7d746a;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px grey;
+    margin: 2rem 0 0 0;
 }
-form {
-    width: 50%;
+
+#img-div {
+    height: auto;
+    width: 8rem;
+    color: #7d746a
 }
 #img-div {
-    position: absolute;
-    left: 150px;
-    top: 25%;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-image: url("Images/UserImg.png");
-    background-repeat: no-repeat;
+    margin: 0 auto;
 }
 
 .textInput {
     margin-top: 2px;
     margin-bottom: 10px;
-    height: 28px;
+    height: 60px;
     font-weight: bold;
     box-shadow: 4px 4px 2px grey;
-    border: 1px solid #5E6E66;
-    background-color: white;
+    background-color: #ebdccc;
     color: #423d38;
     border-radius: 30px;
     font-size: 16px;
-    padding-left: 15px;
     width: 100%;
-
+    text-align: center;
+    border: 1px solid #423d38;
 }
+
 /*Button Styling: Start*/
 .btn {
+    margin-bottom: 1rem;
     padding: 10px;
     width: 100%;
-    margin: 2px;
+
     border-radius: 30px;
+    height: 50px;
     background-color: #7d746a;
     color: #423d38;
     border: 1px solid #7d746a;
     outline: none;
     font-weight: bold;
+    margin-top: 5px;
     box-shadow: 4px 4px 2px grey;
-
-
 }
 /*Button Styling: End*/
 .val_error {
     color: #FF1F1F;
 }
 #background_input {
-    position: absolute;
-    bottom: 10%;
-    left: 80px;
-    width: 250px;
+    width: 15rem;
+    margin: 0 auto;
     height: 240px;
     background-color: #ebdccc;
     padding: 10px;
-    border-radius: 10px;
+    margin-top: 2rem;
 }
 
 #remember-div {
-    padding: 10px;
+    height: 2rem;
+    padding: 0 0.5rem;
 }
+
 div label{
     font-size: 13px;
     padding: 10px;
@@ -107,66 +108,7 @@ div a {
 #reg-link {
     margin-left: 39%;
 }
-/*Wrapper: End*/
 
-/*Mobil versjon*/
-@media only screen and (max-width: 500px) {
-    #wrapper {
-        position: relative;
-        height: 600px;
-        width: 270px;
-        margin: 50px 35px;
-        padding: 10px;
-        background: white;
-        border-radius: 10%;
-        border: 1px solid #7d746a;
-        
-    
-    }
-    #header {
-        position: absolute;
-        top: 10%;
-        right: 25%;
-        width: 150px;
-        height: 50px;
-        background-color: #7d746a;
-        border-radius: 5px;
-        text-align: center;
-        
-        
-    }
-    #img-div {
-        position: absolute;
-        left: 70px;
-        top: 25%;
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-image: url("Images/UserImg.png");
-        background-repeat: no-repeat;
-    }
-
-    #background_input {
-        position: absolute;
-        bottom: 5%;
-        left: 35px;
-        width: 200px;
-        height: 240px;
-        background-color: #ebdccc;
-        padding: 10px;
-        border-radius: 10px;
-    }
-
-    div label{
-        font-size: 10px;
-        padding: 5px;
-    }
-    div a {
-        font-size: 10px;
-    
-    }
-
-    
-
-
+#login-div {
+    margin-top: 1.5rem;
 }

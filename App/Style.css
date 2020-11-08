@@ -205,5 +205,17 @@ main {
     cursor: pointer;
   }
 
+  .styledinput {
+    width: 200px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #ebdccc;
+    color: #423d38;
+    border: 1px solid #423d38;
+    font-weight: bold;
+    box-shadow: 4px 4px 2px grey;
+    text-align: center;
+  }
+
 
  

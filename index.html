@@ -6,10 +6,10 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../Style.css" />
-    <link rel="stylesheet" href="./HomePage.css" />
+    <link rel="stylesheet" href="./Kassesystem/Style.css" />
+    <link rel="stylesheet" href="./Kassesystem/Home_Page/HomePage.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hjem</title>
+    <title>Index page</title>
   </head>
   <body>
     <div class="parent">
@@ -17,17 +17,12 @@
 
       <main>
         <section class="mainbox" id="mainbox">
-
           <div class="logotext-homepage">
             <h3>EivindCafé</h3>
           </div>
 
           <div class="logoiconfrontpage">
-            <svg
-              viewBox="0 0 396.302 396.302"
-              role="img"
-              fill="currentColor"
-            >
+            <svg viewBox="0 0 396.302 396.302" role="img" fill="currentColor">
               <path
                 d="M72.877,359.087c-18.312-32.301-5.855-82.955,32.033-120.847c43.029-43.022,102.518-53.277,132.891-22.907
                        c0.032,0.038,0.07,0.081,0.116,0.122c-6.079,17.688-25.441,55.314-83.465,75.659C101.292,309.758,80.79,339.41,72.877,359.087z
@@ -46,28 +41,25 @@
             </svg>
           </div>
 
-          <div class="login-homepage-username">
-            <input class="styledinput" type="text" name="username" placeholder="ANSATTNUMMER" />
-            <div id="name_error" class="val_error normaltext"></div>
-          </div>
+          <h1 class="normaltext">Til kunde-appen (må sees i mobilformat):</h1>
+          <a href="./App/Login_Page/LoginPage.html">
+            <div class="login-homepage-button">
+              <button class="large-button" name="loginBtn">
+                BESTILLINGS-APP
+              </button>
+            </div>
+          </a>
 
-          <div class="login-homepage-password">
-            <input class="styledinput" type="password" name="password" placeholder="PASSORD" />
-            <div id="password_error" class="val_error normaltext"></div>
-          </div>
-
-          <div class="login-homepage-button">
-              <button class="large-button" name="loginBtn">LOGG INN</button>
-          </div>
-          
+          <h1 class="normaltext">Til ansattes kassesystem:</h1>
+          <a href="./Kassesystem/Home_Page/HomePage.html">
+            <div class="login-homepage-button">
+              <button class="large-button" name="loginBtn">KASSESYSTEM</button>
+            </div>
+          </a>
         </section>
       </main>
 
       <footer></footer>
-
-      <script type="module" src="./script.js"></script>
-
-
     </div>
   </body>
 </html>

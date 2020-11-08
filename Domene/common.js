@@ -2,8 +2,17 @@ import drinks from "./drinks.js";
 import desserts from "./desserts.js";
 
 // Constants
+
 const localStorageOrdersName = "orders";
+const localStorageOrdersDraftName = "orders-draft"; // Orders in draft is stored here. Not shown in "Kassasystem"
 const localStorageUserIdName = "userId";
+
+const orderStatus = {
+  DRAFT: "Kladd",
+  IN_PROGRESS: "Tilberedes på kjøkkenet",
+  DONE: "Ferdig ✅",
+  CANCELLED: "Kansellert ❌"
+};
 
 // User management
 
@@ -24,15 +33,41 @@ function getUserId() {
 export function setUserId(userId) {
   localStorage.setItem(localStorageUserIdName, userId);
   localStorage.setItem(
-    localStorageOrdersName,
+    localStorageOrdersDraftName,
     JSON.stringify({
-      ...getOrders(),
-      [userId]: {
-        total: 0,
-        orderLines: [],
-      },
+      ...getDraftOrders(),
+      [userId]: getEmptyDraftOrder(),
     })
   );
+}
+
+/**
+ * Check whether the user is logged in
+ */
+function isLoggedIn() {
+  return getUserId() ? true : false
+}
+
+/**
+ * If user is not logged in, redirect to login page..
+ */
+export function checkLoginOrRedirect() {
+  if(!isLoggedIn()) {
+    window.location.replace(`../Login_Page/LoginPage.html`);
+  }
+}
+
+/**
+ * If user is not logged in, redirect to login page..
+ */
+export function checkLoginOrRedirectKasseSystem() {
+  if(!isLoggedIn()) {
+    window.location.replace(`../Home_Page/HomePage.html`);
+  }
+}
+
+export function logout() {
+  localStorage.removeItem(localStorageUserIdName)
 }
 
 // Drink management
@@ -44,7 +79,7 @@ export function setUserId(userId) {
  * @param {string} size size of the drink. Allowed values are: small, medium, large,
  * @param {number} quantity number of drinks to add to cart
  */
-export function addDrinkToCart(name, size, quantity) {
+export function addDrinkToCart(name, size, quantity, other) {
   const drink = getDrink(name);
   addToCart(
     getUserId(),
@@ -52,6 +87,7 @@ export function addDrinkToCart(name, size, quantity) {
       key: generateUUID(),
       price: drink.size[size].price,
       description: `${drink.name} - ${drink.size[size].name}`,
+      other: other
     },
     quantity
   );
@@ -74,7 +110,7 @@ export function getDrink(name) {
  * @param {string} name name of the dessert how it appears in the desserts.js data structure
  * @param {number} quantity number of desserts to add to cart
  */
-export function addDessertToCart(name, quantity) {
+export function addDessertToCart(name, quantity, other) {
   const dessert = getDessert(name);
   addToCart(
     getUserId(),
@@ -82,6 +118,7 @@ export function addDessertToCart(name, quantity) {
       key: generateUUID(),
       price: dessert.price,
       description: dessert.name,
+      other: other
     },
     quantity
   );
@@ -107,7 +144,7 @@ export function getDessert(name) {
  * @param {number} quantity number of items in order
  */
 function addToCart(userId, item, quantity = 1) {
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   const orderLines = [
     ...(order?.orderLines ?? []),
     {
@@ -116,6 +153,7 @@ function addToCart(userId, item, quantity = 1) {
       singlePrice: item.price,
       price: item.price * quantity,
       description: item.description,
+      other: item.other
     },
   ];
   const currentTotal = orderLines
@@ -123,10 +161,11 @@ function addToCart(userId, item, quantity = 1) {
     .reduce((prev, next) => prev + next);
 
   localStorage.setItem(
-    localStorageOrdersName,
+    localStorageOrdersDraftName,
     JSON.stringify({
-      ...getOrders,
+      ...getDraftOrders,
       [userId]: {
+        ...order,
         total: currentTotal,
         orderLines: orderLines,
       },
@@ -140,7 +179,7 @@ function addToCart(userId, item, quantity = 1) {
  */
 export function removeOrderLineForLoggedInUser(key) {
   const userId = getUserId();
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   const orderLines = order.orderLines.filter(
     (orderLine) => orderLine.key !== key
   );
@@ -149,9 +188,9 @@ export function removeOrderLineForLoggedInUser(key) {
     .reduce((prev, next) => prev + next, 0);
 
   localStorage.setItem(
-    localStorageOrdersName,
+    localStorageOrdersDraftName,
     JSON.stringify({
-      ...getOrders,
+      ...getDraftOrders,
       [userId]: {
         ...order,
         total: currentTotal,
@@ -168,7 +207,7 @@ export function removeOrderLineForLoggedInUser(key) {
  */
 export function updateOrderLineQuantityForLoggedInUser(key, quantity) {
   const userId = getUserId();
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   const orderLines = order.orderLines.map((orderLine) =>
     orderLine.key === key
       ? {
@@ -183,9 +222,9 @@ export function updateOrderLineQuantityForLoggedInUser(key, quantity) {
     .reduce((prev, next) => prev + next, 0);
 
   localStorage.setItem(
-    localStorageOrdersName,
+    localStorageOrdersDraftName,
     JSON.stringify({
-      ...getOrders,
+      ...getDraftOrders,
       [userId]: {
         ...order,
         total: currentTotal,
@@ -201,8 +240,17 @@ export function updateOrderLineQuantityForLoggedInUser(key, quantity) {
  */
 export function getCurrentTotalForLoggedInUser() {
   const userId = getUserId();
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   return order.total;
+}
+
+/**
+ * Gets the order key for the logged in user
+ */
+export function getOrderKeyForLoggedInUser() {
+  const userId = getUserId();
+  const order = getOrderDraftByUserId(userId);
+  return order.key;
 }
 
 /**
@@ -210,7 +258,7 @@ export function getCurrentTotalForLoggedInUser() {
  */
 export function getOrderLinesForLoggedInUser() {
   const userId = getUserId();
-  const order = getOrderByUserId(userId);
+  const order = getOrderDraftByUserId(userId);
   return order.orderLines;
 }
 /**
@@ -219,26 +267,123 @@ export function getOrderLinesForLoggedInUser() {
  */
 export function getOrderLineForLoggedInUser(key) {
   const userId = getUserId();
-  const orderLines = getOrderByUserId(userId).orderLines;
+  const orderLines = getOrderDraftByUserId(userId).orderLines;
 
   return orderLines.find((orderLine) => orderLine.key === key);
 }
+
+/**
+ * Returns all orders for the current logged in user
+ */
+export function getOrderHistoryForLoggedInUser() {
+  const userId = getUserId();
+  const orders = getOrders();
+  return orders?.filter(order => order.userId === userId) ?? [];
+}
+
 
 /**
  * Gets the current order for the specified user from local storage.
  *
  * @param {string} userId to which user it concerns
  */
-function getOrderByUserId(userId) {
-  const orders = JSON.parse(localStorage.getItem(localStorageOrdersName));
+function getOrderDraftByUserId(userId) {
+  const orders = getDraftOrders();
   return orders[userId];
+}
+
+/**
+ * Get all draft orders from the local storage
+ */
+function getDraftOrders() {
+  return JSON.parse(localStorage.getItem(localStorageOrdersDraftName));
+}
+
+export function getOrdersInProgress() {
+  const orders = getOrders();
+  return orders.filter((order) => order.orderStatus === orderStatus.IN_PROGRESS);
 }
 
 /**
  * Get all orders from the local storage
  */
-function getOrders() {
+export function getOrders() {
   return JSON.parse(localStorage.getItem(localStorageOrdersName));
+}
+
+/**
+ * Get order by key
+ * @param {string} key 
+ */
+export function getOrderByKey(key) {
+  return getOrders().find(order => order.key === key);
+}
+
+/**
+ * Gets an empty order draft with an unique key identifier
+ */
+function getEmptyDraftOrder() {
+  return {
+    key: generateUUID(),
+    total: 0,
+    orderLines: [],
+    orderStatus: orderStatus.DRAFT,
+  };
+}
+
+/**
+ * Change the status for an order from DRAFT to IN_PROGRESS for the currently logged in user.
+ * Moves the order from 'order-draft' to 'order' and gives the order an unique key.
+ */
+export function changeOrderStatusToInProgress() {
+  const userId = getUserId();
+  const order = getOrderDraftByUserId(userId);
+
+  // Move from draft orders to orders
+  localStorage.setItem(
+    localStorageOrdersName,
+    JSON.stringify([
+      ...(getOrders() ?? []),
+      {
+        ...order,
+        orderStatus: orderStatus.IN_PROGRESS,
+        userId: userId,
+      },
+    ])
+  );
+
+  // remove draft order
+  localStorage.setItem(
+    localStorageOrdersDraftName,
+    JSON.stringify({
+      ...getDraftOrders(),
+      [userId]: getEmptyDraftOrder(),
+    })
+  );
+}
+
+/**
+ * Change the status from IN_PROGRESS to CANCELLED
+ * @param {string} key the key identifyer for the order
+ */
+export function changeOrderStatusToCancelled(key) {
+  const orders = getOrders().map((order) => order.key === key ? { ...order, orderStatus: orderStatus.CANCELLED } : order)
+  localStorage.setItem(
+    localStorageOrdersName,
+    JSON.stringify([...orders])
+  );
+}
+
+/**
+ * Change the status from IN_PROGRESS to DONE
+ * @param {string} key the key identifyer for the order
+ */
+export function changeOrderStatusToDone(key) {
+  const orders = getOrders().map((order) => order.key === key ? { ...order, orderStatus: orderStatus.DONE } : order)
+  localStorage.setItem(
+    localStorageOrdersName,
+    JSON.stringify([...orders])
+  );
 }
 
 /**

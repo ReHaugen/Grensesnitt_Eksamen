@@ -1,9 +1,54 @@
 body {
-    background-image: url("../../App/Login_Page/Images/Bakgrunn_Fade.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../../App/Login_Page/Images/Bakgrunn_Fade.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #mainbox {
-    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.57);
-    border-radius: 10px;
+  box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.57);
+  border-radius: 10px;
+}
+
+#orders {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 1rem;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+}
+
+.order .title {
+  margin: 0;
+  text-decoration: underline;
+}
+
+.order .status {
+  font-weight: bold;
+}
+
+.order .sum {
+  margin-top: 0.2rem;
+  text-decoration: underline;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.large-button:first-child {
+  margin-right: 0.5rem;
+}
+
+.large-button:last-child {
+  margin-left: 0.5rem;
+}
+
+.large-button {
+  width: 8rem;
+  height: 2rem;
 }

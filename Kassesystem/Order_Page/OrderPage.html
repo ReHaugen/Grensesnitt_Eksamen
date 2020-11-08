@@ -70,100 +70,124 @@
          <h1 class="normaltext">Drikke:</h1>
 
         
-         <button class="food-button">FILTERKAFFE</button>
+         <button class="drink-button" name="filterkaffe">FILTERKAFFE</button>
     
-          <button class="food-button">CAPPUCCINO</button>
+          <button class="drink-button" name="cappuccino">CAPPUCCINO</button>
         
-         <button class="food-button">AMERICANO</button>
+         <button class="drink-button" name="americano">AMERICANO</button>
        
-         <button class="food-button">ISKAFFE</button>
+         <button class="drink-button" name="iskaffe">ISKAFFE</button>
 
-         <button class="food-button">CAFFE MOCHA</button>
+         <button class="drink-button" name="caffe mocha">CAFFE MOCHA</button>
 
-         <button class="food-button">CAFFE LATTE</button>
+         <button class="drink-button" name="caffe latte">CAFFE LATTE</button>
 
-         <button class="food-button">CARAMEL MACCHIATO</button>
+         <button class="drink-button" name="caramel macchiato">CARAMEL MACCHIATO</button>
 
-         <button class="food-button">ESPRESSO</button>
+         <button class="drink-button" name="espresso">ESPRESSO</button>
 
-         <button class="food-button">CORTADO</button>
+         <button class="drink-button" name="cortado">CORTADO</button>
 
-         <button class="food-button">ISTE</button>
+         <button class="drink-button" name="iste">ISTE</button>
 
-         <button class="food-button">ANNET</button>
+         <button class="drink-button" name="annet">ANNET</button>
         
 
             <h1 class="normaltext">Dessert:</h1>
-            <button class="food-button">BROWNIES</button>
+            <button class="food-button" name="brownies">BROWNIES</button>
     
-            <button class="food-button">OREOKAKE</button>
+            <button class="food-button" name="oreokake">OREOKAKE</button>
         
-            <button class="food-button">KANELBOLLE</button>
+            <button class="food-button" name="kanelbolle">KANELBOLLE</button>
        
-             <button class="food-button">CROISSANT</button>
+             <button class="food-button" name="croissant">CROISSANT</button>
 
-         <button class="food-button">CHIAPUDDING</button>
+         <button class="food-button" name="chiapudding">CHIAPUDDING</button>
 
-         <button class="food-button">BRIOCHE</button>
+         <button class="food-button" name="brioche">BRIOCHE</button>
 
-            <button class="food-button">SCONES</button>
+            <button class="food-button" name="scones">SCONES</button>
 
-            <button class="food-button">ANNET</button>
+            <button class="food-button" name="annet">ANNET</button>
           </div>
+        
+          <!-- Menu item cardview, main container -->
+          <div id="menuCard" class="menuCardWindow">
 
-        <div class="order-page-main-box">
-            <div>
-                <h1 class="normaltext">Handlekurv:</h1>
-                <h4 class="normaltext">
-                  Her kan du justere antall eller fjerne varer før du fullfører
-                  bestillingen.
-                </h4>
+            <!-- Menu item cardview, content container -->
+            <div class="menuCardContent">                            
+                <span class="close">&times;</span>
                 
-                <div>
-                <span class="normaltext">Varelinje 1</span>
-                <button class="small-button">+</button>
-                <button class="small-button">-</button>
-                <button class="small-button">x</button>
-               </div>
+                
+                <div id = "photoContainer"> <img src="" alt="Menu item" id = "menuPhoto"> </div>
+                <div id = "itemTitleContainer"><h1 id = "itemTitle"> </h1> </div>
+                <div id = "foodPrice"><p id = "pricetxt"></p> <p> per stk </p></div>
 
-               <div>
-                <span class="normaltext">Varelinje 2</span>
-                <button class="small-button">+</button>
-                <button class="small-button">-</button>
-                <button class="small-button">x</button>
-               </div>
+                <div id="changeSizeContainer">
 
-               <div>
-                <span class="normaltext">Varelinje 3</span>
-                <button class="small-button">+</button>
-                <button class="small-button">-</button>
-                <button class="small-button">x</button>
-               </div>
-
-               <div>
-                <span class="normaltext">Varelinje 4</span>
-                <button class="small-button">+</button>
-                <button class="small-button">-</button>
-                <button class="small-button">x</button>
-               </div>
-             
-              </div>
-              <div class="sumwrapper">
-                  <p class="normaltext">SUM: </p>
-                  <span class="dots"></span>
+                    <p>Velg størrelse:</p>
+                
+                <!-- size option buttons -->
+                <div class = "sizeDiv">
+                    <button class="size-btn" name="small" ><img src="Images/small.png" alt = "small size" id = "small" name="small"></button>
+                    <p id = "smalltxt"></p>
                 </div>
-              <div class="buttonwrapper">
                 
-                  <a href="../Receipt_Page/ReceiptPage.html">
-                    <button class="large-button">KORT</button>
-                  </a>
+                <div class = "sizeDiv">
+                    <button class="size-btn" name="medium" ><img src="Images/medium.png" alt = "medium size" id = "medium" name="medium"></button>
+                    <p id = "mediumtxt"></p>
+                </div>
+
+                <div class = "sizeDiv">
+                    <button class="size-btn" name="large" ><img src="Images/large.png" alt = "large size" id = "large" name="large"></button>
+                    <p id = "largetxt"></p>
+                </div>
+
+                </div>
                 
-               
-                  <a href="../Receipt_Page/ReceiptPage.html">
-                    <button class="large-button">KONTANT</button>
-                  </a>
-                
-              </div>
+                <!-- quantity buttons -->
+                <div id = "quantityDiv"> 
+                    <button class="changeQuantity_btn" id = "subtract_btn">-</button>
+                    <p id = "quantityCounter"> 1 </p>
+                    <button class="changeQuantity_btn" id = "add_btn" >+</button>
+                    <p id = "error"></p>
+                </div>
+
+
+                <div id="otherDiv">
+                  <p class="normaltext">Spesielle ønsker, matpreferanser eller allergener?</p>
+                  <input type="text" class="styledinput" id="other_input" placeholder="eks. ekstra shot" />
+                </div>
+            
+            <div id = "menuItemFooter"> <p id="addToOrder">Legg til i bestilling</p></div>
+
+            </div>
+        </div>
+          
+        <div class="order-page-main-box">
+          <div>
+            <h1 class="normaltext">Min handlekurv:</h1>
+            <h4 class="normaltext">
+              Her kan du justere antall eller fjerne varer før du fullfører
+              bestillingen.
+            </h4>
+
+            <div id="orderLines">
+              <!-- The order lines from local storage comes here. See script.js -->
+            </div>
+
+          </div>
+          <div class="sumwrapper">
+              <u><p class="normaltext">SUM: <span id="total"><!-- The total comes here. See script.js --></span> kr</p></u>
+            </div>
+          <div class="buttonwrapper">
+            <div>
+                <button class="large-button" name="pay">BETAL MED KORT</button>
+            </div>
+            <div>
+              <button class="large-button" name="pay">BETAL MED KONTANT</button>
+            </div>
+          </div>    
         </div>
       </section>
       </main>
@@ -174,4 +198,7 @@
 
     </div>
   </body>
+  <script src="../../Domene/common.js" type="module"></script>
+  <script src="./script-prepare-order.js" type="module"></script>
+  <script src="./script-pay-order.js" type="module"></script>
 </html>
