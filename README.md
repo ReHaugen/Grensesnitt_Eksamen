@@ -1,4 +1,4 @@
-# Group 24 ☕️
+# Group 24 - EivindCafé☕️
 Semester task - DS3801 Grensesnittdesign - Kristiania University College. 
 
 ## Customer app: 
