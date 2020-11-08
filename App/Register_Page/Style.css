@@ -6,14 +6,16 @@ body {
 
 }
 #wrapper {
-    position: relative;
-    height: 650px;
-    width: 400px;
-    margin: 50px auto;
-    padding: 20px;
+    height: 90vh;
+    max-width: 50rem;
+    margin: 0 auto;
+
     background: #ebdccc;
-    border-radius: 10%;
+    border-radius: 0.5rem;
     border: 1px solid #7d746a;
+    animation-name: FadeIn;
+    animation-duration: 1s;
+}
 
 }
 #header {
@@ -54,7 +56,7 @@ form {
     width: 100%;
     font-weight: bold;
     box-shadow: 4px 4px 2px grey;
-    background-color: white;
+    background-color: #ebdccc;
     color: #423d38;
     border-radius: 30px;
    
