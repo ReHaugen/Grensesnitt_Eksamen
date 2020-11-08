@@ -2,7 +2,7 @@
 Semester task - DS3801 Grensesnittdesign - Kristiania University College. 
 
 ## Customer app: 
-![](Images/app.gif) 
+![](Images/app.gif)
 
 ## Cash register system for employees:
 
