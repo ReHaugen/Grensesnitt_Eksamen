@@ -29,17 +29,24 @@
 box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
 }
 
-#buttonContainer{
+.buttonContainer{
 
-  margin-left: 0px auto;
-  margin-top: 0px;
+  width: 350px;
+  margin: auto;
+  text-align: center;
   
-  top:0px;
+  
   
 }
 
 #drinkbtnContainer{
   text-align: center;
+  margin-top: 0px;
+}
+
+#foodbtnContainer{
+  text-align: center;
+  margin-top: 0px;
 }
 
 
@@ -71,9 +78,44 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
 }
 
 #drinkHeader{
-  width: 110%;
-  background-color: #ebdccc;
+  text-align: center;
+  margin-bottom: -60px;
+  margin: auto;
+  margin-top: 15px;
 }
+
+#foodHeader{
+  text-align: center;
+  
+  margin: auto;
+  margin-top: 0px;
+}
+
+.decoration{
+  margin: 0px auto;
+  color: #ebdccc;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 25px;
+  letter-spacing: -6px;
+  display: inline-block;
+  
+}
+
+.menuHeaderTxt{
+  color: #ebdccc;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 27px;
+  letter-spacing: 4px;
+  display: inline-block;
+  
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+
+
 
 .food-button{
   width: 280px;
@@ -139,30 +181,8 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   color: #7d746a;
 }
 
-.drink-button:hover {
-  background-color: #57514b;
-  color: #ebdccc;
-  cursor: pointer;
-}
 
-/*.food-button{
-    width: 150px;
-    height: 80px;
-    border-radius: 30px;
-    background-color: #7d746a;
-    color: #423d38;
-    border: 1px solid #7d746a;
-    outline: none;
-    font-weight: bold;
-    margin-top: 7px;
-    box-shadow: 4px 4px 2px grey;
-}*/
 
-.food-button:hover {
-    background-color: #57514b;
-    color: #ebdccc;
-    cursor: pointer;
-  }
 
 
   /**
@@ -390,4 +410,31 @@ box-shadow: 2px 5px 22px 0px rgba(0,0,0,0.48);
   .active {
     border: 5px solid #423d38;
   }
-  
+
+  @media only screen and (min-width: 900px) {
+    /* For desktop: */
+    .buttonContainer{
+      width: 900px;
+      text-align: center;
+      margin: auto;
+    }
+
+    
+
+    
+
+
+    .subcontainer{
+      text-align: center;
+      margin: auto;
+      width: 350px;
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .drink-button{
+      margin: 15px;
+    }
+}
